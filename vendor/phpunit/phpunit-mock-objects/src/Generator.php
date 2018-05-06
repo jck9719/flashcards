@@ -593,9 +593,7 @@ class Generator
             $object->__phpunit_setOriginalObject($proxyTarget);
         }
 
-        if ($object instanceof MockObject) {
-            $object->__phpunit_setReturnValueGeneration($returnValueGeneration);
-        }
+        $object->__phpunit_setReturnValueGeneration($returnValueGeneration);
 
         return $object;
     }

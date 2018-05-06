@@ -14,10 +14,8 @@ return PhpCsFixer\Config::create()
         [
             'array_syntax' => ['syntax' => 'short'],
             'binary_operator_spaces' => [
-                'operators' => [
-                    '=' => 'align',
-                    '=>' => 'align',
-                ],
+                'align_double_arrow' => true,
+                'align_equals' => true
             ],
             'blank_line_after_namespace' => true,
             'blank_line_before_statement' => [

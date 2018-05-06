@@ -12,3 +12,13 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+.btn-text {
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.img-responsive {
+  max-width: 100%; height: auto; display:block;
+}

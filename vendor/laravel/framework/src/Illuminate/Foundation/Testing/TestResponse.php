@@ -281,7 +281,7 @@ class TestResponse
      */
     public function assertSee($value)
     {
-        PHPUnit::assertContains((string) $value, $this->getContent());
+        PHPUnit::assertContains($value, $this->getContent());
 
         return $this;
     }
@@ -307,7 +307,7 @@ class TestResponse
      */
     public function assertSeeText($value)
     {
-        PHPUnit::assertContains((string) $value, strip_tags($this->getContent()));
+        PHPUnit::assertContains($value, strip_tags($this->getContent()));
 
         return $this;
     }
@@ -333,7 +333,7 @@ class TestResponse
      */
     public function assertDontSee($value)
     {
-        PHPUnit::assertNotContains((string) $value, $this->getContent());
+        PHPUnit::assertNotContains($value, $this->getContent());
 
         return $this;
     }
@@ -346,7 +346,7 @@ class TestResponse
      */
     public function assertDontSeeText($value)
     {
-        PHPUnit::assertNotContains((string) $value, strip_tags($this->getContent()));
+        PHPUnit::assertNotContains($value, strip_tags($this->getContent()));
 
         return $this;
     }
@@ -711,7 +711,7 @@ class TestResponse
                 "Session is missing expected key [{$key}]."
             );
         } else {
-            PHPUnit::assertEquals($value, $this->session()->get($key));
+            PHPUnit::assertEquals($value, app('session.store')->get($key));
         }
 
         return $this;
@@ -750,7 +750,7 @@ class TestResponse
 
         $keys = (array) $keys;
 
-        $errors = $this->session()->get('errors')->getBag($errorBag);
+        $errors = app('session.store')->get('errors')->getBag($errorBag);
 
         foreach ($keys as $key => $value) {
             if (is_int($key)) {

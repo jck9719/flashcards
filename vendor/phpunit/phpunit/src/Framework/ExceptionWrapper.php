@@ -75,12 +75,12 @@ class ExceptionWrapper extends Exception
     /**
      * @param string $className
      */
-    public function setClassName(string $className): void
+    public function setClassName(string $className)
     {
         $this->className = $className;
     }
 
-    public function setOriginalException(\Throwable $t): void
+    public function setOriginalException(\Throwable $t)
     {
         $this->originalException($t);
 
