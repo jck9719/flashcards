@@ -63,7 +63,7 @@ class DecksTableSeeder extends Seeder
             'public' => true
         ],
         [
-            'name' => 'House',
+            'name' => 'Informatic',
             'words' => $jsonInformatic,
             'subcategory_id' => DB::table('subcategories')->where('name', 'Informatyka')->pluck('id')->first(),
             'user_id' => DB::table('users')->where('name', 'admin')->pluck('id')->first(),
@@ -72,18 +72,9 @@ class DecksTableSeeder extends Seeder
             'public' => true
         ],
         [
-            'name' => 'House',
-            'words' => $jsonOne,
-            'subcategory_id' => DB::table('subcategories')->where('name', 'Dom')->pluck('id')->first(),
-            'user_id' => DB::table('users')->where('name', 'admin')->pluck('id')->first(),
-            'language1_id' => DB::table('languages')->where('name', 'Polski')->pluck('id')->first(),
-            'language2_id' => DB::table('languages')->where('name', 'English')->pluck('id')->first(),
-            'public' => true
-        ],
-        [
-            'name' => 'House',
+            'name' => 'Medic',
             'words' => $jsonMedic,
-            'subcategory_id' => DB::table('subcategories')->where('name', 'Medyczne')->pluck('id')->first(),
+            'subcategory_id' => DB::table('subcategories')->where('name', 'Medycyna')->pluck('id')->first(),
             'user_id' => DB::table('users')->where('name', 'admin')->pluck('id')->first(),
             'language1_id' => DB::table('languages')->where('name', 'Polski')->pluck('id')->first(),
             'language2_id' => DB::table('languages')->where('name', 'English')->pluck('id')->first(),
