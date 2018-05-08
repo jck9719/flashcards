@@ -10,3 +10,4 @@ if (! function_exists('clearSession')) {
         $request->session()->pull('wrongWords');
     }
 }
+
