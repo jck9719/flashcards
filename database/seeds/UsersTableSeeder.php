@@ -14,27 +14,27 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'name' => 'apanekAdmin',
-                'email' => 'arekpn@gmail.com',
-                'password' => bcrypt('secret'),
+                'name' => 'admin',
+                'email' => 'gaunt1111@gmail.com',
+                'password' => bcrypt('admin'),
                 'role_id' => DB::table('roles')->where('name', 'admin')->pluck('id')->first()
             ],
             [
-                'name' => 'apanekSupEd',
-                'email' => 'arekpnsuped@gmail.com',
-                'password' => bcrypt('secret'),
+                'name' => 'supereditor',
+                'email' => 'se@gmail.com',
+                'password' => bcrypt('se'),
                 'role_id' => DB::table('roles')->where('name', 'supereditor')->pluck('id')->first()
             ],
             [
-                'name' => 'apanekEd',
-                'email' => 'arekpned@gmail.com',
-                'password' => bcrypt('secret'),
+                'name' => 'editor',
+                'email' => 'editor@gmail.com',
+                'password' => bcrypt('editor'),
                 'role_id' => DB::table('roles')->where('name', 'editor')->pluck('id')->first()
             ],
             [
-                'name' => 'apanekUser',
-                'email' => 'arekpnuser@gmail.com',
-                'password' => bcrypt('secret'),
+                'name' => 'doe',
+                'email' => 'doe@gmail.com',
+                'password' => bcrypt('doe'),
                 'role_id' => DB::table('roles')->where('name', 'user')->pluck('id')->first()
             ]
         ]);

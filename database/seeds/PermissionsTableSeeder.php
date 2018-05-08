@@ -13,17 +13,14 @@ class PermissionsTableSeeder extends Seeder
     {
         DB::table('permissions')->insert([
             [
-                'user_id' => DB::table('users')->where('name', 'apanekEd')->pluck('id')->first(),
+                'user_id' => DB::table('users')->where('name', 'editor')->pluck('id')->first(),
                 'subcategory_id' => 1
             ],[
-                'user_id' => DB::table('users')->where('name', 'apanekEd')->pluck('id')->first(),
+                'user_id' => DB::table('users')->where('name', 'supereditor')->pluck('id')->first(),
                 'subcategory_id' => 2
             ],[
-                'user_id' => DB::table('users')->where('name', 'apanekSupEd')->pluck('id')->first(),
-                'subcategory_id' => 1
-            ],[
-                'user_id' => DB::table('users')->where('name', 'apanekSupEd')->pluck('id')->first(),
-                'subcategory_id' => 4
+                'user_id' => DB::table('users')->where('name', 'supereditor')->pluck('id')->first(),
+                'subcategory_id' => 3
             ]
         ]);
     }

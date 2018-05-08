@@ -18,11 +18,11 @@ class RolesTableSeeder extends Seeder
         ],[
             'id' => 2,
             'name' => 'supereditor',
-            'description' => 'Edycja wszystkich zestawów słówek.'
+            'description' => 'Edycja i dodawanie zestawów do subkategorii w których otrzymano uprawnienia.'
         ],[
             'id' => 3,
             'name' => 'editor',
-            'description' => 'Edycja wybranego zestawu słówek.'
+            'description' => 'Edycja zestawu słówek do subkategorii w których otrzymano uprawnienia.'
         ],[
             'id' => 4,
             'name' => 'user',
