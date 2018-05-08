@@ -21,9 +21,6 @@
                             @foreach($category->subcategories as $subcategory)
                                 <li class="list-group-item">
                                     <div class="row">
-                                        <div class="col-md-2">
-                                            <img class="img-responsive" src="{{ \Illuminate\Support\Facades\Storage::disk('local')->url($subcategory['image_url']) }}" alt="{{ $subcategory['name'] }} - {{ $subcategory['description'] }}">
-                                        </div>
                                         <div class="col-md-3">
                                             <a href="/category/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}">{{ $subcategory['name'] }}</a>
                                         </div>
