@@ -12,9 +12,6 @@
                             @foreach($categories as $category)
                                 <li class="list-group-item">
                                     <div class="row">
-                                        <div class="col-md-2">
-                                            <img class="img-responsive" src="{{ \Illuminate\Support\Facades\Storage::disk('local')->url($category['image_url']) }}" alt="{{ $category['name'] }} - {{ $category['description'] }}">
-                                        </div>
                                         <div class="col-md-3">
                                             <a href="/category/{{ $category['id'] }}">{{ $category['name'] }}</a>
                                         </div>

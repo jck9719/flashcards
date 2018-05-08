@@ -14,19 +14,19 @@ class RolesTableSeeder extends Seeder
         DB::table('roles')->insert([[
             'id' => 1,
             'name' => 'admin',
-            'description' => 'All permissions'
+            'description' => 'Adminstrator, zarządzanie wszystkim.'
         ],[
             'id' => 2,
             'name' => 'supereditor',
-            'description' => 'Can edit all decks'
+            'description' => 'Edycja wszystkich zestawów słówek.'
         ],[
             'id' => 3,
             'name' => 'editor',
-            'description' => 'Can edit given decks'
+            'description' => 'Edycja wybranego zestawu słówek.'
         ],[
             'id' => 4,
             'name' => 'user',
-            'description' => 'Default, no special permissions'
+            'description' => 'Wgląd w rezultalty i tworzenie prywatnych zestawów słówek.'
         ]
         ]);
     }

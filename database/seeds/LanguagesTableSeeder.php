@@ -13,20 +13,12 @@ class LanguagesTableSeeder extends Seeder
     {
         DB::table('languages')->insert([[
             'id' => 1,
-            'name' => 'Polish',
+            'name' => 'Polski',
             'code' => 'pl'
         ], [
             'id' => 2,
             'name' => 'English',
             'code' => 'en'
-        ], [
-            'id' => 3,
-            'name' => 'Spanish',
-            'code' => 'es'
-        ], [
-            'id' => 4,
-            'name' => 'French',
-            'code' => 'fr'
         ]
         ]);
     }
