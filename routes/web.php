@@ -50,7 +50,7 @@ Route::get('/results', 'ResultsController@index')->name('results');
 
 Auth::routes();
 
-Route::get('/', function() {
+Route::get('/panel', function() {
 	return view('/adminpanel');
 });
 
