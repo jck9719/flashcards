@@ -80,6 +80,7 @@ Route::put('/sets/{id}', 'DecksController@update');
 
 Route::get('/sets/{cid}/subcategory/{sid}/add', 'DecksController@newDeck');
 Route::post('/sets/{cid}/subcategory/{sid}/add', 'DecksController@add');
+Route::delete('/sets/{id}', 'DecksController@delete');
 
 
 

@@ -5,7 +5,14 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Panel Administratora</div>
+                  <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                Panel Administratora
+                            </div>
+                            <div class="col-sm-12 col-md-6 text-right">
+                                <a href="{{ url()->previous() }}">Cofnij</a>
+                            </div>
+                        </div>
 
                     <div class="card-body">
                         <ul class="list-group">

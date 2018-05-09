@@ -11,7 +11,7 @@
                                 Panel Administratora
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Back</a>
+                                <a href="{{ url()->previous() }}">Cofnij</a>
                             </div>
                         </div>
                     </div>
