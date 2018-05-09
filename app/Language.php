@@ -1,9 +1,9 @@
 <?php
 
-namespace flashcards;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use flashcards\Deck;
+use App\Deck;
 
 class Language extends Model
 {

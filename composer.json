@@ -27,13 +27,13 @@
             "app/Http/Controllers/Controller.php"
         ],
         "psr-4": {
-            "flashcards\\": "app/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-                "flashcards\\": "app/"
+                "App\\": "app/"
         }
     },
     "extra": {

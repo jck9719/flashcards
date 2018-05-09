@@ -1,6 +1,6 @@
 <?php
 
-namespace flashcards;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 

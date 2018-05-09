@@ -1,6 +1,6 @@
 -- MySQL dump 10.16  Distrib 10.1.32-MariaDB, for Linux (x86_64)
 --
--- Host: localhost    Database: flashcards
+-- Host: localhost    Database: App
 -- ------------------------------------------------------
 -- Server version	10.1.32-MariaDB
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;

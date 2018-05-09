@@ -1,8 +1,8 @@
 <?php
 
-namespace flashcards\Listeners;
+namespace App\Listeners;
 
-use flashcards\Subcategory;
+use App\Subcategory;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 

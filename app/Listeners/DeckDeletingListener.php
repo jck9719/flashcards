@@ -1,10 +1,10 @@
 <?php
 
-namespace flashcards\Listeners;
+namespace App\Listeners;
 
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use flashcards\Deck;
+use App\Deck;
 
 class DeckDeletingListener
 {

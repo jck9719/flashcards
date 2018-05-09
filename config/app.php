@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'flashcards'),
+    'name' => env('APP_NAME', 'App'),
 
     /*
     |--------------------------------------------------------------------------
@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        flashcards\Providers\AppServiceProvider::class,
-        flashcards\Providers\AuthServiceProvider::class,
-        // flashcards\Providers\BroadcastServiceProvider::class,
-        flashcards\Providers\EventServiceProvider::class,
-        flashcards\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
     ],
 

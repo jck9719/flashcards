@@ -1,9 +1,9 @@
 <?php
 
-namespace flashcards;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use flashcards\Listeners\CategoryDeletingListener;
+use App\Listeners\CategoryDeletingListener;
 
 class Category extends Model
 {
