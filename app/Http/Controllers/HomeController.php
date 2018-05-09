@@ -1,6 +1,7 @@
 <?php
+use App\Http\Controllers\Controller;
 
-namespace flashcards\Http\Controllers\Controller;
+
 
 use Illuminate\Http\Request;
 use App\Category;
