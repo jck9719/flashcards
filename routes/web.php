@@ -15,14 +15,14 @@ Route::get('/', function () {
 });
 
 Route::get('/start', 'HomeController@home');
-
+/*
 Route::get('/category/{id}', 'CategoriesController@index');
 Route::get('/category/new/create', 'CategoriesController@create');
 Route::post('/category/create', 'CategoriesController@store');
 Route::get('/category/{id}/update', 'CategoriesController@update');
 Route::put('/category/{id}', 'CategoriesController@put');
 Route::delete('/category/{id}', 'CategoriesController@delete');
-
+*/
 Route::get('/category/{id}/subcategory/create', 'SubcategoriesController@create');
 Route::get('/category/{cid}/subcategory/{sid}', 'SubcategoriesController@index');
 Route::post('/category/{id}/subcategory/create', 'SubcategoriesController@store');
@@ -60,4 +60,8 @@ Route::put('/dbusers/user/{id}', 'AdminController@put');
 Route::delete('/dbusers/user/{id}', 'AdminController@delete');
 
 Route::get('/cats', 'CategoriesController@list');
+Route::get('/cats/new/create', 'CategoriesController@create');
+Route::post('/cats/create', 'CategoriesController@store');
 Route::get('/cats/{id}/update', 'CategoriesController@update');
+Route::put('/cats/{id}', 'CategoriesController@put');
+Route::delete('/cats/{id}', 'CategoriesController@delete');
