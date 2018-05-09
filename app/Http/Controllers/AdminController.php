@@ -25,7 +25,7 @@ class AdminController extends Controller
 
         $users = User::all();
 
-        return view('/admin', ['users' => $users]);
+        return view('/admin/', ['users' => $users]);
     }
 
     public function update($id)
