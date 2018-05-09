@@ -40,24 +40,16 @@
                                                         </button>
                                                     </form>
                                                 </div>
+                                                <div class="col-md-2 text-center pd">
+                                                    <a class="btn btn-primary pull-right" aria-label="Left Align" href="/sets/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}/add">
+                                                        <span class="btn-text"><i class="fas fa-pencil-alt"></i>Stwórz nowy zestaw</span>
+                                                    </a>
+                                                </div>
                                     </div>
                                 </li>
                             @endforeach
                         </ul>
                         <div class="divider" style="margin-top: 20px"></div>
-                        @if(Auth::check() && Auth::user()->role_id == 1)
-                            <div class="row">
-                                <div class="col-md-3"></div>
-                                <div class="col-md-6 text-center">
-                                    <a href="/sets/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}/add" class="btn btn-warning"
-                                       aria-label="Left Align">
-                                        <span class="btn-text"><i
-                                                    class="fas fa-plus-circle"></i>Stwórz nowy zestaw</span>
-                                    </a>
-                                </div>
-                            </div>
-                        @endif
-                        
                     </div>
                 </div>
             </div>
