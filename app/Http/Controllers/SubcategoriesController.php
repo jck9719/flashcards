@@ -77,7 +77,7 @@ class SubcategoriesController extends Controller
 
         $category->subcategories()->save($subcategory);
 
-        return redirect('/subs/');
+        return redirect('/cats/');
     }
 
     public function update($cid, $sid)
