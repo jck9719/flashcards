@@ -32,8 +32,8 @@
             bindto: '#chart',
             data: {
                 columns: [
-                    ['Your results' @foreach($user->results as $result) ,{{ $result['percentage'] * 100 }} @endforeach],
-                    ['Average results' @foreach($user->results as $result) ,{{ $average * 100 }} @endforeach]
+                    ['Twoje wyniki', 30, 200, 100, 400, 150, 250],
+                    ['Średnia' @foreach($user->results as $result) ,{{ $average * 100 }} @endforeach]
                 ]
             },
             zoom: {
