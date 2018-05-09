@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 
-class HomeController extends \App\Http\Controllers\Controller
-{
+class HomeController extends Controller
 
     public function __construct(Request $request)
     {
