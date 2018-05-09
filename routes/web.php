@@ -50,7 +50,12 @@ Route::get('/results', 'ResultsController@index')->name('results');
 
 Auth::routes();
 
+Route::get('/admin/', function() {
+	return veiw('main');
+});
+/*
 Route::get('/home', 'AdminController@index')->name('home');
 Route::get('/home/user/{id}', 'AdminController@update');
 Route::put('/home/user/{id}', 'AdminController@put');
 Route::delete('/home/user/{id}', 'AdminController@delete');
+*/
