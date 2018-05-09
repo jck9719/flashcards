@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <link href="{{ asset('css/c3.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('c3-0.5.4/c3.min.css') }}" rel="stylesheet">
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="{{ asset('js/c3.min.js') }}"></script>
+    <script src="{{ asset('c3-0.5.4/c3.min.js') }}"></script>
 
     <div class="container">
         <div class="row justify-content-center">
