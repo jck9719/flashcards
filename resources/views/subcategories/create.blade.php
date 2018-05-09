@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="/subs/{{ $category['id'] }}/subcategory/create" method="post">
+                        <form action="/subs/{{ $category['id'] }}/create" method="post">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="title">Tytuł</label>
