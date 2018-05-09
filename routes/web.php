@@ -51,7 +51,7 @@ Route::get('/results', 'ResultsController@index')->name('results');
 Auth::routes();
 
 Route::get('/main', function() {
-	return veiw('main');
+	return view('main');
 });
 /*
 Route::get('/home', 'AdminController@index')->name('home');
