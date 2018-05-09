@@ -63,18 +63,7 @@
                             @endforeach
                         </ul>
                         <div class="divider" style="margin-top: 20px"></div>
-                        @if(Auth::check() && Auth::user()->role_id == 1)
-                            <div class="row">
-                                <div class="col-md-3"></div>
-                                <div class="col-md-6 text-center">
-                                    <a href="/category/{{ $category['id'] }}/subcategory/{{ $subcategory['id'] }}/decks/create" class="btn btn-warning"
-                                       aria-label="Left Align">
-                                        <span class="btn-text"><i
-                                                    class="fas fa-plus-circle"></i>Dodaj nowy zestaw</span>
-                                    </a>
-                                </div>
-                            </div>
-                        @endif
+                       
                     </div>
                 </div>
             </div>
