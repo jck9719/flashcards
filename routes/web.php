@@ -54,6 +54,7 @@ Route::get('/main', function() {
 	return view('/admin/main');
 });
 Route::get('/admin', 'AdminController@index')->name('users');
+Route::get('/admin/user/{id}', 'AdminController@update');
 /*
 Route::get('/home', 'AdminController@index')->name('home');
 Route::get('/home/user/{id}', 'AdminController@update');
