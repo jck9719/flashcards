@@ -22,6 +22,13 @@ class DecksController extends Controller
         ]);
     }
 
+    public function list()
+    {
+        $setsList = Deck::all();
+        return view('sets', [
+            'sets' => $setsList]);
+    }
+
     public function preview($id)
     {
         $deck = Deck::with(['language1', 'language2'])->findOrFail($id);

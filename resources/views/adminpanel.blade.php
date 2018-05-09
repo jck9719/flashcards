@@ -20,8 +20,8 @@
                         <ul class="list-group">
     						<li class="list-group-item"><a href="/dbusers">Użytkownicy</a></li>
     						<li class="list-group-item"><a href="/cats">Kategorie</a></li>
-    						<li class="list-group-item"><a href="#">Podkategorie</a></li>
-    						<li class="list-group-item"><a href="#">Zestawy</a></li>
+    						<li class="list-group-item"><a href="/subs">Podkategorie</a></li>
+    						<li class="list-group-item"><a href="/sets">Zestawy</a></li>
   						</ul>
 					</div>
 				</div>
