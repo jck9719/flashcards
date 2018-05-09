@@ -63,7 +63,7 @@ class AdminController extends Controller
         $user->role_id = $roleId;
         $user->save();
 
-        return redirect('/home');
+        return redirect('/admin/users');
     }
 
     public function delete($id)
@@ -75,7 +75,7 @@ class AdminController extends Controller
 
         $user->delete();
 
-        return redirect('/home');
+        return redirect('/admin/users');
     }
 
     private function isAdmin() {
