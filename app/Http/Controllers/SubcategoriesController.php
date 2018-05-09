@@ -64,7 +64,6 @@ class SubcategoriesController extends Controller
 
         $title = $request->input('title');
         $description = $request->input('description');
-        $path = $request->file('image')->store('public');
 
         $subcategory = new Subcategory();
         $subcategory->name = $title;
@@ -96,7 +95,6 @@ class SubcategoriesController extends Controller
 
         $title = $request->input('title');
         $description = $request->input('description');
-        $path = $request->file('image');
 
         $category = Category::findOrFail($cid);
         $subcategory = Subcategory::findOrFail($sid);

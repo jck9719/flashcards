@@ -37,7 +37,6 @@ class CategoriesController extends Controller
 
         $title = $request->input('title');
         $description = $request->input('description');
-        $path = $request->file('image')->store('public');
 
         $category = new Category();
         $category->name = $title;
@@ -67,7 +66,6 @@ class CategoriesController extends Controller
 
         $title = $request->input('title');
         $description = $request->input('description');
-        $path = $request->file('image');
 
         $category = Category::findOrFail($id);
         $category->name = $title;
