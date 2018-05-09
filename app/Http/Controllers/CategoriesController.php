@@ -22,6 +22,13 @@ class CategoriesController extends Controller
             'category' => $category]);
     }
 
+    public function list()
+    {
+        $category = Category::all();
+        return view('categories.category', [
+            'category' => $category]);
+    }
+
     public function create()
     {
         if(!$this->isAdmin())
