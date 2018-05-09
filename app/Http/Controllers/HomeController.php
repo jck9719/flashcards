@@ -2,27 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Category;
-use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
 
     public function __construct(Request $request)
     {
-    if(! function_exists('clearSession')) {
-    function clearSession(\Illuminate\Http\Request $request) {
-        $request->session()->pull('words');
-        $request->session()->pull('language1');
-        $request->session()->pull('language2');
-        $request->session()->pull('isFirstLanguage');
-        $request->session()->pull('wordsCount');
-        $request->session()->pull('pointedWordsCount');
-        $request->session()->pull('wrongWords');
         clearSession($request);
-    }
-    }
     }
 
 
