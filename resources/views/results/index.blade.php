@@ -3,7 +3,7 @@
 @section('content')
     <link href="{{ asset('css/c3.min.css') }}" rel="stylesheet">
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="{{ asset('js/c3.min.js') }}"></script>
+    <script src="{{ asset('css/c3.min.js') }}"></script>
 
     <div class="container">
         <div class="row justify-content-center">
