@@ -77,7 +77,7 @@ class SubcategoriesController extends Controller
 
         $category->subcategories()->save($subcategory);
 
-        return redirect('/category/' . $id);
+        return redirect('/subs/');
     }
 
     public function update($cid, $sid)
@@ -109,7 +109,7 @@ class SubcategoriesController extends Controller
 
         $category->subcategories()->save($subcategory);
 
-        return redirect('/category/' . $cid);
+        return redirect('/subs/');
     }
 
     public function delete($cid, $sid)
