@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="/home/user/{{ $user['id'] }}"
+                        <form action="/admin/user/{{ $user['id'] }}"
                               method="post" enctype="multipart/form-data">
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
