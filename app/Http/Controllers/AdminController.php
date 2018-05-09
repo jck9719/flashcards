@@ -37,7 +37,7 @@ class AdminController extends Controller
         $roles = Role::all();
         $categories = Category::all();
 
-        return view('dbusers.update', [
+        return view('admin.update', [
             'user' => $user,
             'roles' => $roles,
             'categories' => $categories

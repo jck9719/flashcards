@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="/category/{{ $category['id'] }}/subcategory/create" method="post">
+                        <form action="/subs/{{ $category['id'] }}/subcategory/create" method="post">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="title">Tytuł</label>
@@ -26,6 +26,19 @@
                             <div class="form-group">
                                 <label for="description">Opis</label>
                                 <textarea class="form-control" name="description" id="description" rows="5" placeholder="Enter description"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="role">Wybierz kategorię</label>
+                                <select class="form-control" id="category" name="category">
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category['id'] }}"
+                                                @if($category['subcategory_id'] == $subcategory['id'])
+                                                selected
+                                                @endif
+                                        >{{ $role['name'] }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary mg float-right">Stwórz</button>
                         </form>
