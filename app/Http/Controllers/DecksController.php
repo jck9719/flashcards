@@ -362,7 +362,7 @@ class DecksController extends Controller
             $isSubcategoryEditor
         ) {
 
-            //$isPublic = $visibility == 'public' && $isSubcategoryEditor ? true : false;
+        $isPublic = $visibility == 'public' && $isSubcategoryEditor ? true : false;
 
 
         $deck->words = json_encode($wordsArr);
