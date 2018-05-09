@@ -25,7 +25,7 @@ class CategoriesController extends Controller
     public function list()
     {
         $categoryList = Category::all();
-        return view('cats', [
+        return view('categories.cats', [
             'category' => $categoryList]);
     }
 

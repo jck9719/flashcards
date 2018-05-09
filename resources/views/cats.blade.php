@@ -9,7 +9,7 @@
 
                     <div class="card-body">
                         <ul class="list-group">
-                            @foreach($categoryList as $category)
+                            @foreach($categories as $category)
                                 <li class="list-group-item">
                                     <div class="row">
                                         <div class="col-md-3">
