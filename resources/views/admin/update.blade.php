@@ -24,12 +24,12 @@
                             <div class="form-group">
                                 <label for="title">Nazwa</label>
                                 <input type="text" class="form-control" name="title" id="title"
-                                       placeholder="Enter title" value="{{ $user['name'] }}" disabled>
+                                       placeholder="Enter title" value="{{ $user['name'] }}">
                             </div>
                             <div class="form-group">
                                 <label for="em">Email</label>
                                 <input type="text" class="form-control" name="em" id="em"
-                                       placeholder="Enter title" value="{{ $user['email'] }}" disabled>
+                                       placeholder="Enter title" value="{{ $user['email'] }}">
                             </div>
                             <div class="form-group">
                                 <label for="role">Zmiana roli</label>
