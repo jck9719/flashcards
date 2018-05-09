@@ -362,11 +362,7 @@ class DecksController extends Controller
             $isSubcategoryEditor
         ) {
 
-        } else {
-            return back();
-        }
-
-        $isPublic = $visibility == 'public' && $isSubcategoryEditor ? true : false;
+            //$isPublic = $visibility == 'public' && $isSubcategoryEditor ? true : false;
 
 
         $deck->words = json_encode($wordsArr);
@@ -379,6 +375,12 @@ class DecksController extends Controller
         $deck->save();
 
         return redirect('/sets');
+
+        } else {
+            return back();
+        }
+
+        
     }
 
     private function newWordsArray($arr1, $arr2, $lang1, $lang2)
