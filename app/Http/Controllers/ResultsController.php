@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace flashcards\Http\Controllers;
 
-use App\Result;
-use App\User;
+use flashcards\Result;
+use flashcards\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

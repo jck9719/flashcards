@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace flashcards\Http\Controllers;
 
-use App\Subcategory;
+use flashcards\Subcategory;
 use Illuminate\Http\Request;
-use App\Category;
+use flashcards\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 

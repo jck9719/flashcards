@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace flashcards\Http\Controllers;
 
-use App\Deck;
-use App\Language;
-use App\Result;
-use App\Subcategory;
+use flashcards\Deck;
+use flashcards\Language;
+use flashcards\Result;
+use flashcards\Subcategory;
 use Illuminate\Http\Request;
 use \DB;
 use Illuminate\Support\Facades\Auth;

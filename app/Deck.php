@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace flashcards;
 
-use App\Listeners\DeckDeletingListener;
+use flashcards\Listeners\DeckDeletingListener;
 use Illuminate\Database\Eloquent\Model;
 
 class Deck extends Model

@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace flashcards;
 
-use App\Listeners\SubcategoryDeletingListener;
+use flashcards\Listeners\SubcategoryDeletingListener;
 use Illuminate\Database\Eloquent\Model;
-use App\Category;
+use flashcards\Category;
 
 class Subcategory extends Model
 {

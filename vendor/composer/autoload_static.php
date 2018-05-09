@@ -17,12 +17,17 @@ class ComposerStaticInit2ce0ffad288e9159c598de95fcb59065
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '6d394c3a532652dafb4dd296ba6a3f0b' => __DIR__ . '/../..' . '/app/Http/helpers.php',
+        'e20d87db600a9d442090200a132df003' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'f' => 
+        array (
+            'flashcards\\' => 11,
         ),
         'X' => 
         array (
@@ -104,10 +109,6 @@ class ComposerStaticInit2ce0ffad288e9159c598de95fcb59065
             'Cron\\' => 5,
             'Carbon\\' => 7,
         ),
-        'A' => 
-        array (
-            'App\\' => 4,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -116,6 +117,11 @@ class ComposerStaticInit2ce0ffad288e9159c598de95fcb59065
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'flashcards\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+            1 => __DIR__ . '/../..' . '/app',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -269,11 +275,6 @@ class ComposerStaticInit2ce0ffad288e9159c598de95fcb59065
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
-        'App\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app',
-            1 => __DIR__ . '/../..' . '/app',
-        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -316,42 +317,6 @@ class ComposerStaticInit2ce0ffad288e9159c598de95fcb59065
     );
 
     public static $classMap = array (
-        'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
-        'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
-        'App\\Deck' => __DIR__ . '/../..' . '/app/Deck.php',
-        'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
-        'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
-        'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
-        'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
-        'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
-        'App\\Http\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriesController.php',
-        'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\DecksController' => __DIR__ . '/../..' . '/app/Http/Controllers/DecksController.php',
-        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
-        'App\\Http\\Controllers\\ResultsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ResultsController.php',
-        'App\\Http\\Controllers\\SubcategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/SubcategoriesController.php',
-        'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
-        'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
-        'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
-        'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
-        'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
-        'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Language' => __DIR__ . '/../..' . '/app/Language.php',
-        'App\\Listeners\\CategoryDeletingListener' => __DIR__ . '/../..' . '/app/Listeners/CategoryDeletingListener.php',
-        'App\\Listeners\\DeckDeletingListener' => __DIR__ . '/../..' . '/app/Listeners/DeckDeletingListener.php',
-        'App\\Listeners\\SubcategoryDeletingListener' => __DIR__ . '/../..' . '/app/Listeners/SubcategoryDeletingListener.php',
-        'App\\Listeners\\UserDeletingListener' => __DIR__ . '/../..' . '/app/Listeners/UserDeletingListener.php',
-        'App\\Permission' => __DIR__ . '/../..' . '/app/Permission.php',
-        'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
-        'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
-        'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
-        'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
-        'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
-        'App\\Result' => __DIR__ . '/../..' . '/app/Result.php',
-        'App\\Role' => __DIR__ . '/../..' . '/app/Role.php',
-        'App\\Subcategory' => __DIR__ . '/../..' . '/app/Subcategory.php',
-        'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
@@ -3601,6 +3566,41 @@ class ComposerStaticInit2ce0ffad288e9159c598de95fcb59065
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'flashcards\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'flashcards\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'flashcards\\Deck' => __DIR__ . '/../..' . '/app/Deck.php',
+        'flashcards\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'flashcards\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
+        'flashcards\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
+        'flashcards\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
+        'flashcards\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
+        'flashcards\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+        'flashcards\\Http\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriesController.php',
+        'flashcards\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'flashcards\\Http\\Controllers\\DecksController' => __DIR__ . '/../..' . '/app/Http/Controllers/DecksController.php',
+        'flashcards\\Http\\Controllers\\ResultsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ResultsController.php',
+        'flashcards\\Http\\Controllers\\SubcategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/SubcategoriesController.php',
+        'flashcards\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'flashcards\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
+        'flashcards\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
+        'flashcards\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
+        'flashcards\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
+        'flashcards\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'flashcards\\Language' => __DIR__ . '/../..' . '/app/Language.php',
+        'flashcards\\Listeners\\CategoryDeletingListener' => __DIR__ . '/../..' . '/app/Listeners/CategoryDeletingListener.php',
+        'flashcards\\Listeners\\DeckDeletingListener' => __DIR__ . '/../..' . '/app/Listeners/DeckDeletingListener.php',
+        'flashcards\\Listeners\\SubcategoryDeletingListener' => __DIR__ . '/../..' . '/app/Listeners/SubcategoryDeletingListener.php',
+        'flashcards\\Listeners\\UserDeletingListener' => __DIR__ . '/../..' . '/app/Listeners/UserDeletingListener.php',
+        'flashcards\\Permission' => __DIR__ . '/../..' . '/app/Permission.php',
+        'flashcards\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'flashcards\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
+        'flashcards\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
+        'flashcards\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'flashcards\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'flashcards\\Result' => __DIR__ . '/../..' . '/app/Result.php',
+        'flashcards\\Role' => __DIR__ . '/../..' . '/app/Role.php',
+        'flashcards\\Subcategory' => __DIR__ . '/../..' . '/app/Subcategory.php',
+        'flashcards\\User' => __DIR__ . '/../..' . '/app/User.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

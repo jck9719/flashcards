@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Listeners;
+namespace flashcards\Listeners;
 
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use App\Category;
+use flashcards\Category;
 use Illuminate\Support\Facades\Storage;
 
 class CategoryDeletingListener

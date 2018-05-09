@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace flashcards\Http\Controllers;
 
-use App\Category;
-use App\Permission;
-use App\Role;
-use App\User;
+use flashcards\Category;
+use flashcards\Permission;
+use flashcards\Role;
+use flashcards\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
