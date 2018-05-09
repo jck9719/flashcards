@@ -23,13 +23,13 @@
                                         </div>
                                                 <div class="col-md-2 text-center pd">
                                                     <a class="btn btn-primary pull-right" aria-label="Left Align"
-                                                       href="/category/{{ $subs['category_id'] }}/subs/{{ $subcategory['id'] }}/update">
+                                                       href="/subs/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}/update">
                                                     <span class="btn-text"><i
                                                                 class="fas fa-pencil-alt"></i>Edytuj</span>
                                                     </a>
                                                 </div>
                                                 <div class="col-md-2 text-center pd">
-                                                    <form action="/category/{{ $subs['category_id'] }}/subs/{{ $subcategory['id'] }}"
+                                                    <form action="/subs/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}"
                                                           method="post">
                                                         {{ method_field('DELETE') }}
                                                         {{ csrf_field() }}
