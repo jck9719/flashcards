@@ -55,9 +55,5 @@ Route::get('/main', function() {
 });
 Route::get('/admin', 'AdminController@index')->name('users');
 Route::get('/admin/user/{id}', 'AdminController@update');
-/*
-Route::get('/home', 'AdminController@index')->name('home');
-Route::get('/home/user/{id}', 'AdminController@update');
-Route::put('/home/user/{id}', 'AdminController@put');
-Route::delete('/home/user/{id}', 'AdminController@delete');
-*/
+Route::put('/admin/user/{id}', 'AdminController@put');
+Route::delete('/admin/user/{id}', 'AdminController@delete');
