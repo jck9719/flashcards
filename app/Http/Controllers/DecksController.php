@@ -308,22 +308,18 @@ class DecksController extends Controller
 
         $isSubcategoryEditor = false;
         $isSubcategorySuperEditor = false;
-        $isAdmin = false;
 
         foreach ($subcategory->users as $user)
             if(Auth::id() == $user->id) {
                 $isSubcategoryEditor = true;
-                if(Auth::user()->role_id == 2)
+                if(Auth::user()->role_id == 2 || Auth::user()->role_id == 1)
                     $isSubcategorySuperEditor = true;
-                else if(Auth::user()->role_id == 1)
-                    $isAdmin = true;
             }
 
         if(Auth::id() == $deck->user_id ||
             Auth::user()->role_id == 1 ||
             $isSubcategorySuperEditor ||
-            $isSubcategoryEditor ||
-            $isAdmin
+            $isSubcategoryEditor
         ) {
             return view('decks.edit', [
                 'deck' => $deck,
@@ -352,29 +348,25 @@ class DecksController extends Controller
 
         $isSubcategoryEditor = false;
         $isSubcategorySuperEditor = false;
-        $isAdmin
 
         foreach ($subcategory->users as $user)
             if(Auth::id() == $user->id) {
                 $isSubcategoryEditor = true;
-                if(Auth::user()->role_id == 2)
+                if(Auth::user()->role_id == 2 || Auth::user()->role_id == 1)
                     $isSubcategorySuperEditor = true;
-                else if(Auth::user()->role_id == 1)
-                    $isAdmin = true;
             }
 
         if(Auth::id() == $deck->user_id ||
             Auth::user()->role_id == 1 ||
             $isSubcategorySuperEditor ||
-            $isSubcategoryEditor ||
-            $isAdmin
+            $isSubcategoryEditor
         ) {
 
         } else {
             return back();
         }
 
-        $isPublic = $visibility == 'public' && ($isSubcategoryEditor || $isAdmin) ? true : false;
+        $isPublic = $visibility == 'public' && $isSubcategoryEditor ? true : false;
 
 
         $deck->words = json_encode($wordsArr);
