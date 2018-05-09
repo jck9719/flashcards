@@ -312,7 +312,8 @@ class DecksController extends Controller
         foreach ($subcategory->users as $user)
             if(Auth::id() == $user->id) {
                 $isSubcategoryEditor = true;
-                if(Auth::user()->role_id == 2 || Auth::user()->role_id == 1)
+                if (Auth::user()->role_id == 1) $isSubcategorySuperEditor = true;
+                if(Auth::user()->role_id == 2)
                     $isSubcategorySuperEditor = true;
             }
 
@@ -352,7 +353,7 @@ class DecksController extends Controller
         foreach ($subcategory->users as $user)
             if(Auth::id() == $user->id) {
                 $isSubcategoryEditor = true;
-                if(Auth::user()->role_id == 2 || Auth::user()->role_id == 1)
+                if(Auth::user()->role_id == 2)
                     $isSubcategorySuperEditor = true;
             }
 
