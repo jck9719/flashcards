@@ -13,24 +13,19 @@ class SubcategoriesTableSeeder extends Seeder
     {
         DB::table('subcategories')->insert([[
             'id' => 1,
-            'name' => 'Dom',
-            'description' => 'Subkategoria zawierające słówka z działu dom.',
-            'category_id' => DB::table('categories')->where('name', 'Ogólne')->pluck('id')->first()
+            'name' => 'Człowiek',
+            'description' => 'Rzeczowniki z kategorii człowiek.',
+            'category_id' => DB::table('categories')->where('name', 'Nouns')->pluck('id')->first()
         ],[
             'id' => 2,
-            'name' => 'Rodzina',
-            'description' => 'Subategoria zawierająca słówka z działu rodzina',
-            'category_id' => DB::table('categories')->where('name', 'Ogólne')->pluck('id')->first()
+            'name' => 'Wygląd',
+            'description' => 'Przymiotniki z kategorii wygląd.',
+            'category_id' => DB::table('categories')->where('name', 'Adjectives')->pluck('id')->first()
         ],[
             'id' => 3,
-            'name' => 'Informatyka',
-            'description' => 'Subategoria zawierająca słówka z działu informatyka',
-            'category_id' => DB::table('categories')->where('name', 'Specjalistyczne')->pluck('id')->first()
-        ],[
-            'id' => 4,
-            'name' => 'Medycyna',
-            'description' => 'Subategoria zawierająca słówka z działu medycyna',
-            'category_id' => DB::table('categories')->where('name', 'Specjalistyczne')->pluck('id')->first()
+            'name' => 'Prace',
+            'description' => 'Czasowniki z kategorii prace domowe.',
+            'category_id' => DB::table('categories')->where('name', 'Verbs')->pluck('id')->first()
         ]
         ]);
     }

@@ -11,70 +11,54 @@ class DecksTableSeeder extends Seeder
      */
     public function run()
     {
-        $jsonHouse = json_encode([
-            ['pl' => 'dom', 'en' => 'house'],
-            ['pl' => 'drzwi', 'en' => 'door'],
-            ['pl' => 'pokój', 'en' => 'room'],
-            ['pl' => 'półka', 'en' => 'shelf'],
-            ['pl' => 'kuchnia', 'en' => 'kitchen'],
+        $jsonHuman = json_encode([
+            ['pl' => 'człowiek', 'en' => 'human'],
+            ['pl' => 'ręka', 'en' => 'hand'],
+            ['pl' => 'wątroba', 'en' => 'liver'],
+            ['pl' => 'serce', 'en' => 'heart'],
+            ['pl' => 'oko', 'en' => 'eye'],
         ]);
 
-        $jsonFamily = json_encode([
-            ['pl' => 'rodzina', 'en' => 'family'],
-            ['pl' => 'syn', 'en' => 'son'],
-            ['pl' => 'wujek', 'en' => 'uncle'],
-            ['pl' => 'ciotka', 'en' => 'aunt'],
-            ['pl' => 'babcia', 'en' => 'grandmother'],
+        $jsonLook = json_encode([
+            ['pl' => 'piękna', 'en' => 'beautiful'],
+            ['pl' => 'długowłosa', 'en' => 'long-haired'],
+            ['pl' => 'przystojny', 'en' => 'handsome'],
+            ['pl' => 'opalony', 'en' => 'tanned'],
+            ['pl' => 'łysy', 'en' => 'bald'],
         ]);
 
-        $jsonInformatic = json_encode([
-            ['pl' => 'rdzeń', 'en' => 'core'],
-            ['pl' => 'komputer', 'en' => 'computer'],
-            ['pl' => 'klawiatura', 'en' => 'keyboard'],
-            ['pl' => 'oprogramowane', 'en' => 'software'],
-            ['pl' => 'słuchawki', 'en' => 'headphones'],
+        $jsonHomeworks = json_encode([
+            ['pl' => 'odkurzać', 'en' => 'vacuum'],
+            ['pl' => 'gotować', 'en' => 'cook'],
+            ['pl' => 'sprzątać', 'en' => 'clean up'],
+            ['pl' => 'prasować', 'en' => 'iron'],
+            ['pl' => 'zmywać', 'en' => 'wash'],
         ]);
 
-        $jsonMedic = json_encode([
-            ['pl' => 'lekarz', 'en' => 'doktor'],
-            ['pl' => 'pielęgniarka', 'en' => 'nurse'],
-            ['pl' => 'kostnica', 'en' => 'morgue'],
-            ['pl' => 'szpital', 'en' => 'hospital'],
-            ['pl' => 'strzykawka', 'en' => 'syringe'],
-        ]);
 
         DB::table('decks')->insert([
         [
-            'name' => 'House',
-            'words' => $jsonHouse,
-            'subcategory_id' => DB::table('subcategories')->where('name', 'Dom')->pluck('id')->first(),
+            'name' => 'Części ciała',
+            'words' => $jsonHuman,
+            'subcategory_id' => DB::table('subcategories')->where('name', 'Człowiek')->pluck('id')->first(),
             'user_id' => DB::table('users')->where('name', 'admin')->pluck('id')->first(),
             'language1_id' => DB::table('languages')->where('name', 'Polski')->pluck('id')->first(),
             'language2_id' => DB::table('languages')->where('name', 'English')->pluck('id')->first(),
             'public' => true
         ],
         [
-            'name' => 'Family',
-            'words' => $jsonFamily,
-            'subcategory_id' => DB::table('subcategories')->where('name', 'Rodzina')->pluck('id')->first(),
+            'name' => 'Wygląd',
+            'words' => $jsonLook,
+            'subcategory_id' => DB::table('subcategories')->where('name', 'Wygląd')->pluck('id')->first(),
             'user_id' => DB::table('users')->where('name', 'admin')->pluck('id')->first(),
             'language1_id' => DB::table('languages')->where('name', 'Polski')->pluck('id')->first(),
             'language2_id' => DB::table('languages')->where('name', 'English')->pluck('id')->first(),
             'public' => true
         ],
         [
-            'name' => 'Informatic',
-            'words' => $jsonInformatic,
-            'subcategory_id' => DB::table('subcategories')->where('name', 'Informatyka')->pluck('id')->first(),
-            'user_id' => DB::table('users')->where('name', 'admin')->pluck('id')->first(),
-            'language1_id' => DB::table('languages')->where('name', 'Polski')->pluck('id')->first(),
-            'language2_id' => DB::table('languages')->where('name', 'English')->pluck('id')->first(),
-            'public' => true
-        ],
-        [
-            'name' => 'Medic',
-            'words' => $jsonMedic,
-            'subcategory_id' => DB::table('subcategories')->where('name', 'Medycyna')->pluck('id')->first(),
+            'name' => 'Prace domowe',
+            'words' => $jsonHomeworks,
+            'subcategory_id' => DB::table('subcategories')->where('name', 'Prace')->pluck('id')->first(),
             'user_id' => DB::table('users')->where('name', 'admin')->pluck('id')->first(),
             'language1_id' => DB::table('languages')->where('name', 'Polski')->pluck('id')->first(),
             'language2_id' => DB::table('languages')->where('name', 'English')->pluck('id')->first(),

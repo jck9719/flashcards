@@ -13,13 +13,17 @@ class CategoriesTableSeeder extends Seeder
     {
         DB::table('categories')->insert([[
             'id' => 1,
-            'name' => 'Ogólne',
-            'description' => 'Wyrazy dotyczące życia codziennego.',
+            'name' => 'Nouns',
+            'description' => 'Rzeczowniki.',
             
         ],[
             'id' => 2,
-            'name' => 'Specjalistyczne',
-            'description' => 'Wyrazy dotyczącę konkretnych specjalizacji.',
+            'name' => 'Adjectives',
+            'description' => 'Przymiotniki.',
+        ],[
+            'id' => 3,
+            'name' => 'Verbs',
+            'description' => 'Czasowniki.',
         ]
         ]);
     }

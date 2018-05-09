@@ -41,7 +41,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="{{ $langToCheck['code'] }}[]"
-                                                           placeholder="Wpisz tłumaczenie słówka '{{ $word[$langToLearn['code']] }}'">
+                                                    >
                                                 </div>
                                             </div>
                                         </div>
