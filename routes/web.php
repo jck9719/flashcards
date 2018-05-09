@@ -68,6 +68,7 @@ Route::put('/cats/{id}', 'CategoriesController@put');
 Route::delete('/cats/{id}', 'CategoriesController@delete');
 
 Route::get('/subs', 'SubcategoriesController@list');
+Route::get('/subs/{cid}/subcategory/{sid}/update', 'SubcategoriesController@update');
 
 
 
