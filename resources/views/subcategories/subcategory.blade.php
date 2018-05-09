@@ -67,7 +67,7 @@
                             <div class="row">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6 text-center">
-                                    <a href="/category/{{ $category['id'] }}/subcategory/create" class="btn btn-warning"
+                                    <a href="#" class="btn btn-warning"
                                        aria-label="Left Align">
                                         <span class="btn-text"><i
                                                     class="fas fa-plus-circle"></i>Dodaj nowy zestaw</span>
