@@ -60,3 +60,4 @@ Route::put('/dbusers/user/{id}', 'AdminController@put');
 Route::delete('/dbusers/user/{id}', 'AdminController@delete');
 
 Route::get('/cats', 'CategoriesController@list');
+Route::get('/cats/{id}/update', 'CategoriesController@update');
