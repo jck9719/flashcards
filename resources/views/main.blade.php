@@ -5,6 +5,6 @@
   <p>Zarejestruj się by móc oglądać swoje wyniki. Miłej nauki :)</p>
 </div>
 <div class="container">
-	<a href="enyo.ovh/start" class="btn btn-info" role="button">Start!</a>
+	<a href="/start" class="btn btn-info" role="button">Start!</a>
 </div>
 @endsection
