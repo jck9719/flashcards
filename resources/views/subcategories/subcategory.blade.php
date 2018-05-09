@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                Zestaw {{ $subcategory['name'] }} 
+                               Zestaw {{ $subcategory['name'] }}
                                 <p><small>(Twoje prywatne zestawy są oznaczone kolorem żółtym)</small></p>
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
@@ -63,7 +63,7 @@
                             @endforeach
                         </ul>
                         <div class="divider" style="margin-top: 20px"></div>
-                        @if($isSupEd || Auth::id() == $deck['user_id'])
+                        @if(Auth::check())
                             <div class="row">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6 text-center">
