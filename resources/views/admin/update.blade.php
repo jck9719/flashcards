@@ -8,10 +8,10 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                Editing {{ $user['name'] }}
+                                Edytowanie użytkownika {{ $user['name'] }}
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Back</a>
+                                <a href="{{ url()->previous() }}">Cofnij</a>
                             </div>
                         </div>
                     </div>
@@ -22,7 +22,7 @@
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
                             <div class="form-group">
-                                <label for="title">Name</label>
+                                <label for="title">Nazwa</label>
                                 <input type="text" class="form-control" name="title" id="title"
                                        placeholder="Enter title" value="{{ $user['name'] }}" disabled>
                             </div>
@@ -32,7 +32,7 @@
                                        placeholder="Enter title" value="{{ $user['email'] }}" disabled>
                             </div>
                             <div class="form-group">
-                                <label for="role">Role change</label>
+                                <label for="role">Zmiana roli</label>
                                 <select class="form-control" id="role" name="role">
                                     @foreach($roles as $role)
                                         <option value="{{ $role['id'] }}"
@@ -60,7 +60,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Edytuj</button>
                         </form>
                     </div>
                 </div>

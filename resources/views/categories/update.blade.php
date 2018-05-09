@@ -8,10 +8,10 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                Editing {{ $category['name'] }}
+                                Edytowanie kategorii {{ $category['name'] }}
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Back</a>
+                                <a href="{{ url()->previous() }}">Cofnij</a>
                             </div>
                         </div>
                     </div>
@@ -22,17 +22,17 @@
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
                             <div class="form-group">
-                                <label for="title">Title</label>
+                                <label for="title">Tytuł</label>
                                 <input type="text" class="form-control" name="title" id="title"
                                        placeholder="Enter title" value="{{ $category['name'] }}">
                             </div>
                             <div class="form-group">
-                                <label for="description">Description</label>
+                                <label for="description">Opis</label>
                                 <textarea class="form-control" name="description" id="description" rows="5"
                                           placeholder="Enter description">{{ $category['description'] }}</textarea>
                             </div>
                             
-                            <button type="submit" class="btn btn-primary mg float-right">Submit</button>
+                            <button type="submit" class="btn btn-primary mg float-right">Edytuj</button>
                         </form>
                     </div>
                 </div>

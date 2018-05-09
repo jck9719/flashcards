@@ -8,10 +8,10 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                Learn multi {{ $deck['name'] }}!
+                                Tryb nauki wielokrotnego wyboru z zestawu {{ $deck['name'] }}
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Back</a>
+                                <a href="{{ url()->previous() }}">Cofnij</a>
                             </div>
                         </div>
                     </div>
@@ -41,13 +41,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="{{ $langToCheck['code'] }}[]"
-                                                           placeholder="Enter translated '{{ $word[$langToLearn['code']] }}'">
+                                                           placeholder="Wpisz tłumaczenie słówka '{{ $word[$langToLearn['code']] }}'">
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                 @endforeach
-                                <button type="submit" class="btn btn-primary mg float-right">Submit</button>
+                                <button type="submit" class="btn btn-primary mg float-right">Wyślij</button>
                             </form>
                         </ul>
                     </div>

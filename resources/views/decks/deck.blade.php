@@ -8,10 +8,10 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                {{ $deck['name'] }} deck
+                                Zestaw {{ $deck['name'] }}
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Back</a>
+                                <a href="{{ url()->previous() }}">Cofnij</a>
                             </div>
                         </div>
                     </div>
@@ -19,30 +19,30 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-3">
-                                <a href="/deck/{{ $deck['id'] }}/all">See all words</a>
+                                <a href="/deck/{{ $deck['id'] }}/all">Wyświetl słówka</a>
                             </div>
                             <div class="col-md-3">
                                 <p>
-                                    <a href="/deck/once/{{ $deck['id'] }}/{{ $deck['language1_id'] }}/{{ $deck['language2_id'] }}">Learn {{ $deck['language1']['code'] }}
+                                    <a href="/deck/once/{{ $deck['id'] }}/{{ $deck['language1_id'] }}/{{ $deck['language2_id'] }}">Tryb nauki: {{ $deck['language1']['code'] }}
                                         / {{ $deck['language2']['code'] }}</a>
                                 </p>
                                 <p>
-                                    <a href="/deck/multi/{{ $deck['id'] }}/{{ $deck['language1_id'] }}/{{ $deck['language2_id'] }}">Learn {{ $deck['language1']['code'] }}
-                                        / {{ $deck['language2']['code'] }} multi</a>
+                                    <a href="/deck/multi/{{ $deck['id'] }}/{{ $deck['language1_id'] }}/{{ $deck['language2_id'] }}">Tryb nauki wielkrotny: {{ $deck['language1']['code'] }}
+                                        / {{ $deck['language2']['code'] }}</a>
                                 </p>
                             </div>
                             <div class="col-md-3">
                                 <p>
-                                    <a href="/deck/once/{{ $deck['id'] }}/{{ $deck['language2_id'] }}/{{ $deck['language1_id'] }}">Learn {{ $deck['language2']['code'] }}
+                                    <a href="/deck/once/{{ $deck['id'] }}/{{ $deck['language2_id'] }}/{{ $deck['language1_id'] }}">Tryb nauki: {{ $deck['language2']['code'] }}
                                         / {{ $deck['language1']['code'] }}</a>
                                 </p>
                                 <p>
-                                    <a href="/deck/multi/{{ $deck['id'] }}/{{ $deck['language2_id'] }}/{{ $deck['language1_id'] }}">Learn {{ $deck['language2']['code'] }}
-                                        / {{ $deck['language1']['code'] }} multi</a>
+                                    <a href="/deck/multi/{{ $deck['id'] }}/{{ $deck['language2_id'] }}/{{ $deck['language1_id'] }}">Tryb nauki wielokrotny {{ $deck['language2']['code'] }}
+                                        / {{ $deck['language1']['code'] }}</a>
                                 </p>
                             </div>
                             <div class="col-md-3">
-                                <a href="/deck/test/{{ $deck['id'] }}">Check your knowledge</a>
+                                <a href="/deck/test/{{ $deck['id'] }}">Test wiedzy</a>
                             </div>
                         </div>
                     </div>

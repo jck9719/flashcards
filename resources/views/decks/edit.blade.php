@@ -8,10 +8,10 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                Edit {{ $deck['name'] }} deck
+                                Edycja zestawu {{ $deck['name'] }} 
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Back</a>
+                                <a href="{{ url()->previous() }}">Cofnij</a>
                             </div>
                         </div>
                     </div>
@@ -22,14 +22,14 @@
                             {{ csrf_field() }}
                             {{ method_field('PUT') }}
                             <div class="form-group">
-                                <label for="title">Title</label>
+                                <label for="title">Tytuł</label>
                                 <input type="text" class="form-control" name="name" id="title"
                                        value="{{ $deck['name'] }}">
                             </div>
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label for="language1">Language 1</label>
+                                        <label for="language1">Język 1</label>
                                         <select class="form-control" name="language1" id="language1">
                                             @foreach($languages as $language)
                                                 <option value="{{ $language['id'] }}"
@@ -41,7 +41,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="language2">Language 2</label>
+                                        <label for="language2">Język 2</label>
                                         <select class="form-control" name="language2" id="language2">
                                             @foreach($languages as $language)
                                                 <option value="{{ $language['id'] }}"
@@ -79,14 +79,14 @@
                                                    @if($deck['public'])
                                                         checked
                                                    @endif
-                                            >Public</label>
+                                            >Publiczny</label>
                                         </div>
                                         <div class="col-md-3 text-center">
                                             <input type="radio" name="visibility" value="private"
                                                    @if(!$deck['public'])
                                                         checked
                                                    @endif
-                                            >Private</label>
+                                            >Prywatny</label>
                                         </div>
                                     </div>
                                 </div>
@@ -95,14 +95,14 @@
                                 <div class="row">
                                     <div class="col-md-3"></div>
                                     <div class="col-md-3 text-center pd">
-                                        <button class="btn btn-danger" id="add-row-btn">Add new row</button>
+                                        <button class="btn btn-danger" id="add-row-btn">Dodaj nowy wiersz</button>
                                     </div>
                                     <div class="col-md-3 text-center pd">
-                                        <button class="btn btn-danger" id="delete-row-btn">Delete last row</button>
+                                        <button class="btn btn-danger" id="delete-row-btn">Usuń ostatni wiersz</button>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Wyślij</button>
                         </form>
                     </div>
                 </div>

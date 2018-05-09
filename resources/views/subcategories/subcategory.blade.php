@@ -9,10 +9,10 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 {{ $subcategory['name'] }} decks
-                                <p><small>(your private marked with yellow background)</small></p>
+                                <p><small>(Twoje prywatne zestawy są oznaczone kolorem żółtym)</small></p>
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Back</a>
+                                <a href="{{ url()->previous() }}">Cofnij</a>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                                                 <div class="col-md-3 text-center pd">
                                                     <a class="btn btn-primary" href="/deck/{{ $deck['id'] }}/edit">
                                                         <span class="btn-text"><i
-                                                                    class="fas fa-pencil-alt"></i>  Edit</span>
+                                                                    class="fas fa-pencil-alt"></i> Edytuj</span>
                                                     </a>
                                                 </div>
                                             @endif
@@ -51,7 +51,7 @@
                                                         <button type="submit" class="btn btn-danger pull-right"
                                                                 aria-label="Left Align">
                                                             <span class="btn-text">
-                                                                <i class="fas fa-trash-alt"></i>  Delete
+                                                                <i class="fas fa-trash-alt"></i>Usuń
                                                             </span>
                                                         </button>
                                                     </form>

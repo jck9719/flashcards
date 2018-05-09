@@ -22,10 +22,10 @@
             <div class="row">
                 <div class="col-xs-12 text-right">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Strona główna</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ route('login') }}">Zaloguj się</a>
+                        <a href="{{ route('register') }}">Zarejestruj się</a>
                     @endauth
                 </div>
             </div>

@@ -13,9 +13,9 @@
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
                                 @if(Auth::id())
-                                    <a href="{{ url('results') }}">Go to results</a>
+                                    <a href="{{ url('results') }}">Przejdź do wyników</a>
                                 @else
-                                    <a href="/deck/{{ $deck['id'] }}">Back to deck</a>
+                                    <a href="/deck/{{ $deck['id'] }}">Wróć do zestawu</a>
                                 @endif
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                         <ul class="list-group">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h3 class="text-center">Your result is {{ $result['percentage'] * 100 }}%!!!</h3>
+                                    <h3 class="text-center">Twój wynik to: {{ $result['percentage'] * 100 }}%!!!</h3>
                                 </div>
                                 <div class="col-md-12">
 

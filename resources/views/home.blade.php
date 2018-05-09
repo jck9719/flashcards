@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                Dashboard
+                                Panel Administratora
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
                                 <a href="{{ url()->previous() }}">Back</a>
@@ -35,7 +35,7 @@
                                                 <a class="btn btn-primary pull-right" aria-label="Left Align"
                                                    href="/home/user/{{ $user['id'] }}">
                                                     <span class="btn-text"><i
-                                                                class="fas fa-pencil-alt"></i>  Edit</span>
+                                                                class="fas fa-pencil-alt"></i> Edytuj</span>
                                                 </a>
                                             </div>
                                             <div class="col-md-2 text-center pd">
@@ -46,7 +46,7 @@
                                                     <button type="submit" class="btn btn-danger pull-right"
                                                             aria-label="Left Align">
                                                             <span class="btn-text">
-                                                                <i class="fas fa-trash-alt"></i>  Delete
+                                                                <i class="fas fa-trash-alt"></i>Usuń
                                                             </span>
                                                     </button>
                                                 </form>

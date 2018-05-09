@@ -8,10 +8,10 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                {{ $category['name'] }} subcategories
+                                Podzestawy zestawu {{ $category['name'] }}
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Back</a>
+                                <a href="{{ url()->previous() }}">Cofnij</a>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                                                     <a class="btn btn-primary pull-right" aria-label="Left Align"
                                                        href="/category/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}/update">
                                                     <span class="btn-text"><i
-                                                                class="fas fa-pencil-alt"></i>  Edit</span>
+                                                                class="fas fa-pencil-alt"></i>Edytuj</span>
                                                     </a>
                                                 </div>
                                                 <div class="col-md-2 text-center pd">
@@ -43,7 +43,7 @@
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-danger pull-right" aria-label="Left Align">
                                                             <span class="btn-text">
-                                                                <i class="fas fa-trash-alt"></i>  Delete
+                                                                <i class="fas fa-trash-alt"></i>Usuń
                                                             </span>
                                                         </button>
                                                     </form>
@@ -62,7 +62,7 @@
                                     <a href="/category/{{ $category['id'] }}/subcategory/create" class="btn btn-warning"
                                        aria-label="Left Align">
                                         <span class="btn-text"><i
-                                                    class="fas fa-plus-circle"></i>  Add new subcategory</span>
+                                                    class="fas fa-plus-circle"></i>Dodaj nową subkategorię</span>
                                     </a>
                                 </div>
                             </div>

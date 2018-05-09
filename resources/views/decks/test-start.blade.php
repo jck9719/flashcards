@@ -11,7 +11,7 @@
                                 {{ $deck['name'] }} - Test!
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Back</a>
+                                <a href="{{ url()->previous() }}">Cofnij</a>
                             </div>
                         </div>
                     </div>
@@ -22,7 +22,7 @@
                                 <div class="col-md-12">
                                     <form action="/deck/test/{{ $deck['id'] }}" method="post">
                                         {{ csrf_field() }}
-                                        <button type="submit" class="btn btn-primary mg float-right">Check your knowledge!</button>
+                                        <button type="submit" class="btn btn-primary mg float-right">Sprawdź się!</button>
                                     </form>
                                 </div>
                             </div>

@@ -9,20 +9,20 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 @if(count($words) == 0)
-                                    Great! You know all of these words!
+                                    Świetnie! Wpisałeś poprawnie wszystkie słówka!
                                 @else
-                                    You should better learn these words:
+                                    Musisz się jeszcze nauczyć tych słówek:
                                 @endif
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="/deck/{{ $deck['id'] }}">Back to deck</a>
+                                <a href="/deck/{{ $deck['id'] }}">Cofjnij się do zestawu</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="card-body text-center">
                         @if(count($words) == 0)
-                            <a href="/deck/test/{{ $deck['id'] }}">What about some test?</a>
+                            <a href="/deck/test/{{ $deck['id'] }}">Co powiesz na test?</a>
                         @else
                             <ul class="list-group">
                                 <div class="row">

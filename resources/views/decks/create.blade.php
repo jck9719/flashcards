@@ -5,21 +5,21 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Create new deck for {{ $subcategory['name'] }}</div>
+                    <div class="card-header">Tworzenie nowego zestawu w subkategorii {{ $subcategory['name'] }}</div>
 
                     <div class="card-body">
                         <form action="/category/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}/decks/add"
                               method="post">
                             {{ csrf_field() }}
                             <div class="form-group">
-                                <label for="title">Title</label>
+                                <label for="title">Tytuł</label>
                                 <input type="text" class="form-control" name="name" id="title"
                                        placeholder="Enter title">
                             </div>
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label for="language1">Language 1</label>
+                                        <label for="language1">Język 1</label>
                                         <select class="form-control" name="language1" id="language1">
                                             @foreach($languages as $language)
                                                 <option value="{{ $language['id'] }}">{{ $language['name'] }}</option>
@@ -27,7 +27,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="language2">Language 2</label>
+                                        <label for="language2">Język 2</label>
                                         <select class="form-control" name="language2" id="language2">
                                             @foreach($languages as $language)
                                                 <option value="{{ $language['id'] }}">{{ $language['name'] }}</option>
@@ -53,10 +53,10 @@
                                 <div class="row">
                                     <div class="col-md-3"></div>
                                     <div class="col-md-3">
-                                        <input type="radio" name="visibility" value="public">Public</label>
+                                        <input type="radio" name="visibility" value="public">Publiczny</label>
                                     </div>
                                     <div class="col-md-3">
-                                        <input type="radio" name="visibility" value="private" checked>Private</label>
+                                        <input type="radio" name="visibility" value="private" checked>Prywatny</label>
                                     </div>
                                 </div>
                             </div>
@@ -65,14 +65,14 @@
                                 <div class="row">
                                     <div class="col-md-3"></div>
                                     <div class="col-md-3">
-                                        <button class="btn btn-danger" id="add-row-btn">Add new row</button>
+                                        <button class="btn btn-danger" id="add-row-btn">Dodaj nowy wiersz</button>
                                     </div>
                                     <div class="col-md-3">
-                                        <button class="btn btn-danger" id="delete-row-btn">Delete last row</button>
+                                        <button class="btn btn-danger" id="delete-row-btn">Usuń ostatni wiersz</button>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Wyślij</button>
                         </form>
                     </div>
                 </div>

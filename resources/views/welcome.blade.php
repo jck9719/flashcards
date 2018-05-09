@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Categories</div>
+                    <div class="card-header">Kategorie</div>
 
                     <div class="card-body">
                         <ul class="list-group">
@@ -22,7 +22,7 @@
                                             @if(Auth::user()->role_id == 1)
                                                 <div class="col-md-2 text-center pd">
                                                     <a class="btn btn-primary pull-right" aria-label="Left Align" href="/category/{{ $category['id'] }}/update">
-                                                        <span class="btn-text"><i class="fas fa-pencil-alt"></i>  Edit</span>
+                                                        <span class="btn-text"><i class="fas fa-pencil-alt"></i>  Edytuj</span>
                                                     </a>
                                                 </div>
                                                 <div class="col-md-2 text-center pd">
@@ -32,7 +32,7 @@
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-danger pull-right" aria-label="Left Align">
                                                             <span class="btn-text">
-                                                                <i class="fas fa-trash-alt"></i>  Delete
+                                                                <i class="fas fa-trash-alt"></i>  Usuń
                                                             </span>
                                                         </button>
                                                     </form>
@@ -51,7 +51,7 @@
                                     <a href="/category/new/create" class="btn btn-warning"
                                        aria-label="Left Align">
                                         <span class="btn-text"><i
-                                                    class="fas fa-plus-circle"></i>  Add new category</span>
+                                                    class="fas fa-plus-circle"></i>Dodaj nową kategorię</span>
                                     </a>
                                 </div>
                             </div>

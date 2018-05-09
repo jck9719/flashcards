@@ -12,10 +12,10 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                Your results!
+                                Twoje wyniki
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="/">Go to Homepage</a>
+                                <a href="/">Przejdź do strony głównej</a>
                             </div>
                         </div>
                     </div>

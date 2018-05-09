@@ -67,7 +67,7 @@
                                     @endif
 
                                     <a class="dropdown-item" href="/results">
-                                        Results
+                                        Wyniki
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
