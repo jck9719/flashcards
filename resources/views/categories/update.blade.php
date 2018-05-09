@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="/category/{{ $category['id'] }}"
+                        <form action="/cats/{{ $category['id'] }}"
                               method="post" enctype="multipart/form-data">
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}

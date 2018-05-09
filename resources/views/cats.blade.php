@@ -16,12 +16,12 @@
                                             {{ $category['name'] }}
                                         </div>
                                                 <div class="col-md-2 text-center pd">
-                                                    <a class="btn btn-primary pull-right" aria-label="Left Align" href="/category/{{ $category['id'] }}/update">
+                                                    <a class="btn btn-primary pull-right" aria-label="Left Align" href="/cats/{{ $category['id'] }}/update">
                                                         <span class="btn-text"><i class="fas fa-pencil-alt"></i>  Edytuj</span>
                                                     </a>
                                                 </div>
                                                 <div class="col-md-2 text-center pd">
-                                                    <form action="/category/{{ $category['id'] }}"
+                                                    <form action="/cats/{{ $category['id'] }}"
                                                           method="post">
                                                         {{ method_field('DELETE') }}
                                                         {{ csrf_field() }}
