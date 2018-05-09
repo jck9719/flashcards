@@ -378,7 +378,7 @@ class DecksController extends Controller
         $deck->subcategory_id = $subcategory->id;
         $deck->save();
 
-        return redirect('/sets);
+        return redirect('/sets');
     }
 
     private function newWordsArray($arr1, $arr2, $lang1, $lang2)
