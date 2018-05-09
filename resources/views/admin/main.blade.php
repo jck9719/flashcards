@@ -16,14 +16,14 @@
                         </div>
                     </div>
                     <div class="center-block">
-                    <div class="card-body">
+                    
                         <ul class="list-group">
     						<li class="list-group-item"><a href="#">Użytkownicy</a></li>
     						<li class="list-group-item"><a href="#">Kategorie</a></li>
     						<li class="list-group-item"><a href="#">Podkategorie</a></li>
     						<li class="list-group-item"><a href="#">Zestawy</a></li>
   						</ul>
-					</div>
+					
 				</div>
 				</div>
 			</div>
