@@ -80,7 +80,7 @@ class CategoriesController extends Controller
         
         $category->save();
 
-        return back();
+        return redirect('/cats');
     }
 
     public function delete($id)
