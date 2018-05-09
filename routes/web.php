@@ -75,6 +75,13 @@ Route::put('/subs/{cid}/subcategory/{sid}', 'SubcategoriesController@put');
 Route::delete('/subs/{cid}/subcategory/{sid}', 'SubcategoriesController@delete');
 
 Route::get('/sets', 'DecksController@list');
+Route::get('/sets/{id}/edit', 'DecksController@edit');
+Route::put('/sets/{id}', 'DecksController@update');
+
+Route::get('/sets/{cid}/subcategory/{sid}/add', 'DecksController@newDeck');
+Route::post('/sets/{cid}/subcategory/{sid}/add', 'DecksController@add');
+
+
 
 
 

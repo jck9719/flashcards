@@ -362,6 +362,10 @@ class DecksController extends Controller
             $isSubcategoryEditor
         ) {
 
+        } else {
+            return back();
+        }
+
         $isPublic = $visibility == 'public' && $isSubcategoryEditor ? true : false;
 
 
@@ -374,13 +378,7 @@ class DecksController extends Controller
         $deck->subcategory_id = $subcategory->id;
         $deck->save();
 
-        return redirect('/sets');
-
-        } else {
-            return back();
-        }
-
-        
+        return redirect('/category/' . $subcategory->id . '/subcategory/' . $subcategory->category->id);
     }
 
     private function newWordsArray($arr1, $arr2, $lang1, $lang2)
