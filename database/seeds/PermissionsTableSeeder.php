@@ -22,9 +22,6 @@ class PermissionsTableSeeder extends Seeder
                 'user_id' => DB::table('users')->where('name', 'admin')->pluck('id')->first(),
                 'subcategory_id' => 3
             ],[
-                'user_id' => DB::table('users')->where('name', 'admin')->pluck('id')->first(),
-                'subcategory_id' => 4
-            ],[
                 'user_id' => DB::table('users')->where('name', 'editor')->pluck('id')->first(),
                 'subcategory_id' => 1
             ],[
