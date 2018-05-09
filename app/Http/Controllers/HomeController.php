@@ -3,8 +3,9 @@
 namespace flashcards\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
 use Illuminate\Routing\Controller;
+use App\Category;
+
 
 
 class HomeController extends Controller
