@@ -25,7 +25,7 @@ class AdminController extends Controller
 
         $users = User::all();
 
-        return view('/admin/users', ['users' => $users]);
+        return view('dbusers', ['users' => $users]);
     }
 
     public function update($id)
@@ -63,7 +63,7 @@ class AdminController extends Controller
         $user->role_id = $roleId;
         $user->save();
 
-        return redirect('/admin/users');
+        return redirect('/dbusers');
     }
 
     public function delete($id)
@@ -75,7 +75,7 @@ class AdminController extends Controller
 
         $user->delete();
 
-        return redirect('/admin/users');
+        return redirect('/dbusers');
     }
 
     private function isAdmin() {

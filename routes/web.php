@@ -50,10 +50,11 @@ Route::get('/results', 'ResultsController@index')->name('results');
 
 Auth::routes();
 
-Route::get('/main', function() {
-	return view('/admin/main');
+Route::get('/', function() {
+	return view('/adminpanel');
 });
-Route::get('/admin', 'AdminController@index')->name('users');
-Route::get('/admin/user/{id}', 'AdminController@update');
-Route::put('/admin/user/{id}', 'AdminController@put');
-Route::delete('/admin/user/{id}', 'AdminController@delete');
+
+Route::get('/dbusers', 'AdminController@index')->name('dbusers');
+Route::get('/dbusers/user/{id}', 'AdminController@update');
+Route::put('/dbusers/user/{id}', 'AdminController@put');
+Route::delete('/dbusers/user/{id}', 'AdminController@delete');
