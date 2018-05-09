@@ -53,6 +53,7 @@ Auth::routes();
 Route::get('/main', function() {
 	return view('/admin/main');
 });
+Route::get('/admin', 'AdminController@index')->name('users');
 /*
 Route::get('/home', 'AdminController@index')->name('home');
 Route::get('/home/user/{id}', 'AdminController@update');

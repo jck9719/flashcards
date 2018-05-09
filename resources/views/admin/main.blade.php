@@ -15,7 +15,7 @@
                             </div>
                         </div>
                     </div>
-                    <<div class="row">
+                    <div class="row">
     				<div class="col-4 mx-auto">
                         <ul class="list-group">
     						<li class="list-group-item"><a href="#">Użytkownicy</a></li>
