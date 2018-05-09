@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="/category/create" method="post" enctype="multipart/form-data">
+                        <form action="/cates/create" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="title">Tytuł</label>
