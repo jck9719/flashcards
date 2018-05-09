@@ -23,7 +23,7 @@ class HomeController extends Controller
         $request->session()->pull('words', '');
         $categories = Category::all();
 
-        return view('welcome', ['categories' => $categories]);
+        return view('/start/welcome', ['categories' => $categories]);
     }
 
     /**
@@ -34,6 +34,6 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('home', ['categories' => $categories]);
+        return view('/start/welcome', ['categories' => $categories]);
     }
 }
