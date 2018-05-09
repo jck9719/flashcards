@@ -15,8 +15,9 @@ Route::get('/', function () {
 });
 
 Route::get('/start', 'HomeController@home');
-/*
+
 Route::get('/category/{id}', 'CategoriesController@index');
+/*
 Route::get('/category/new/create', 'CategoriesController@create');
 Route::post('/category/create', 'CategoriesController@store');
 Route::get('/category/{id}/update', 'CategoriesController@update');
@@ -65,3 +66,8 @@ Route::post('/cats/create', 'CategoriesController@store');
 Route::get('/cats/{id}/update', 'CategoriesController@update');
 Route::put('/cats/{id}', 'CategoriesController@put');
 Route::delete('/cats/{id}', 'CategoriesController@delete');
+
+Route::get('/subs', 'SubcategoriesController@list');
+
+
+

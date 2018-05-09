@@ -51,7 +51,7 @@ class CategoriesController extends Controller
 
         $category->save();
 
-        return redirect('/');
+        return redirect('/cats');
     }
 
     public function update($id)

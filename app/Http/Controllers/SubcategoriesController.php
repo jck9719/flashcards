@@ -43,6 +43,12 @@ class SubcategoriesController extends Controller
             ]);
     }
 
+    public function list()
+    {
+        $subcategoryList = Subcategory::all();
+        return view('subs', [
+            'subs' => $subcategoryList]);
+    }
     public function create($id)
     {
         if(!$this->isAdmin())
