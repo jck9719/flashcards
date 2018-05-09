@@ -26,47 +26,12 @@
                                         </div>
                                         <div class="col-md-3">
                                             {{ $subcategory['description'] }}
-                                        </div>
-                                        @if(Auth::check())
-                                            @if(Auth::user()->role_id == 1)
-                                                <div class="col-md-2 text-center pd">
-                                                    <a class="btn btn-primary pull-right" aria-label="Left Align"
-                                                       href="/category/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}/update">
-                                                    <span class="btn-text"><i
-                                                                class="fas fa-pencil-alt"></i>Edytuj</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-md-2 text-center pd">
-                                                    <form action="/category/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}"
-                                                          method="post">
-                                                        {{ method_field('DELETE') }}
-                                                        {{ csrf_field() }}
-                                                        <button type="submit" class="btn btn-danger pull-right" aria-label="Left Align">
-                                                            <span class="btn-text">
-                                                                <i class="fas fa-trash-alt"></i>Usuń
-                                                            </span>
-                                                        </button>
-                                                    </form>
-                                                </div>
-                                            @endif
-                                        @endif
+                                        </div>  
                                     </div>
                                 </li>
                             @endforeach
                         </ul>
                         <div class="divider" style="margin-top: 20px"></div>
-                        @if(Auth::check() && Auth::user()->role_id == 1)
-                            <div class="row">
-                                <div class="col-md-3"></div>
-                                <div class="col-md-6 text-center">
-                                    <a href="/category/{{ $category['id'] }}/subcategory/create" class="btn btn-warning"
-                                       aria-label="Left Align">
-                                        <span class="btn-text"><i
-                                                    class="fas fa-plus-circle"></i>Dodaj nową subkategorię</span>
-                                    </a>
-                                </div>
-                            </div>
-                        @endif
                     </div>
                 </div>
             </div>

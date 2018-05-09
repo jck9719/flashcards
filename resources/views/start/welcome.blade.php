@@ -6,7 +6,9 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Kategorie</div>
-
+                    <div class="col-sm-12 col-md-6 text-right">
+                                <a href="{{ url()->previous() }}">Cofnij</a>
+                            </div>
                     <div class="card-body">
                         <ul class="list-group">
                             @foreach($categories as $category)
