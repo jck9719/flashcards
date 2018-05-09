@@ -63,7 +63,7 @@
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     @if(Auth::user()->role_id == 1)
-                                        <a class="dropdown-item" href="/home">Panel administratora</a>
+                                        <a class="dropdown-item" href="/main">Panel administratora</a>
                                     @endif
 
                                     <a class="dropdown-item" href="/results">
