@@ -61,7 +61,7 @@ class CategoriesController extends Controller
 
         $category = Category::findOrFail($id);
 
-        return view('category.update', [
+        return view('categories.update', [
             'category' => $category
         ]);
     }
