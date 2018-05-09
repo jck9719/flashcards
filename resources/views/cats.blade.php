@@ -32,6 +32,11 @@
                                                         </button>
                                                     </form>
                                                 </div>
+                                                 <div class="col-md-2 text-center pd">
+                                                    <a class="btn btn-primary pull-right" aria-label="Left Align" href="/subs/{{ $category['id'] }}/create">
+                                                        <span class="btn-text"><i class="fas fa-pencil-alt"></i>  Dodaj podkategorię</span>
+                                                    </a>
+                                                </div>
                                     </div>
                                 </li>
                             @endforeach

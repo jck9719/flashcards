@@ -68,9 +68,9 @@ Route::put('/cats/{id}', 'CategoriesController@put');
 Route::delete('/cats/{id}', 'CategoriesController@delete');
 
 Route::get('/subs', 'SubcategoriesController@list');
-Route::get('/subs/{id}/subcategory/create', 'SubcategoriesController@create');
+Route::get('/subs/{id}/create', 'SubcategoriesController@create');
 Route::get('/subs/{cid}/subcategory/{sid}/update', 'SubcategoriesController@update');
-Route::post('/subs/{id}/subcategory/create', 'SubcategoriesController@store');
+Route::post('/subs/{id}/create', 'SubcategoriesController@store');
 Route::put('/subs/{cid}/subcategory/{sid}', 'SubcategoriesController@put');
 Route::delete('/subs/{cid}/subcategory/{sid}', 'SubcategoriesController@delete');
 
