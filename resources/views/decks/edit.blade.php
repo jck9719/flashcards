@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="/deck/{{ $deck['id'] }}"
+                        <form action="/sets/{{ $deck['id'] }}"
                               method="post">
                             {{ csrf_field() }}
                             {{ method_field('PUT') }}
