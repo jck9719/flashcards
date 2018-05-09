@@ -50,7 +50,7 @@ Route::get('/results', 'ResultsController@index')->name('results');
 
 Auth::routes();
 
-Route::get('/admin/', function() {
+Route::get('/main', function() {
 	return veiw('main');
 });
 /*
