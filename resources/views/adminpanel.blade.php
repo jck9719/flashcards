@@ -19,7 +19,7 @@
     				<div class="col-4 mx-auto">
                         <ul class="list-group">
     						<li class="list-group-item"><a href="/dbusers">Użytkownicy</a></li>
-    						<li class="list-group-item"><a href="#">Kategorie</a></li>
+    						<li class="list-group-item"><a href="/cats">Kategorie</a></li>
     						<li class="list-group-item"><a href="#">Podkategorie</a></li>
     						<li class="list-group-item"><a href="#">Zestawy</a></li>
   						</ul>
