@@ -63,7 +63,7 @@
                             @endforeach
                         </ul>
                         <div class="divider" style="margin-top: 20px"></div>
-                        @if(Auth::check() && Auth::user()->role_id == 1)
+                        @if(Auth::check())
                             <div class="row">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6 text-center">
