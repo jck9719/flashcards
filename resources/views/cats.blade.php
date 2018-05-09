@@ -32,8 +32,6 @@
                                                         </button>
                                                     </form>
                                                 </div>
-                                            @endif
-                                        @endif
                                     </div>
                                 </li>
                             @endforeach
