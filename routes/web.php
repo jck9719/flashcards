@@ -45,7 +45,7 @@ Route::post('/deck/test/{id}', 'DecksController@testKnowledge');
 Route::get('/deck/{id}/edit', 'DecksController@edit');
 Route::put('/deck/{id}', 'DecksController@update');
 Route::delete('/deck/{id}', 'DecksController@delete');
-Route::get('/category/{cid}/subcategory{sid}/deck/create', 'DecksController@newDeck');
+Route::get('/category/{cid}/subcategory{sid}/decks/create', 'DecksController@newDeck');
 
 Route::get('/results', 'ResultsController@index')->name('results');
 
