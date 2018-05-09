@@ -70,7 +70,7 @@
                                     </div>
                                 @endforeach
                             </div>
-                            @if($isSubcategoryEditor)
+                            @if(($isSubcategoryEditor) || (Auth::user()->role_id == 1))
                                 <div class="form-group">
                                     <div class="row pd">
                                         <div class="col-md-3"></div>
