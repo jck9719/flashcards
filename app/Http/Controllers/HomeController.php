@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 
 class HomeController extends Controller
+{
 
     public function __construct(Request $request)
     {
