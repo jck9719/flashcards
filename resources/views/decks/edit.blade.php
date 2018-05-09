@@ -71,25 +71,17 @@
                                 @endforeach
                             </div>
                             @if($isSubcategoryEditor)
-                                <div class="form-group">
-                                    <div class="row pd">
-                                        <div class="col-md-3"></div>
-                                        <div class="col-md-3 text-center">
-                                            <input type="radio" name="visibility" value="public"
-                                                   @if($deck['public'])
-                                                        checked
-                                                   @endif
-                                            >Publiczny</label>
-                                        </div>
-                                        <div class="col-md-3 text-center">
-                                            <input type="radio" name="visibility" value="private"
-                                                   @if(!$deck['public'])
-                                                        checked
-                                                   @endif
-                                            >Prywatny</label>
-                                        </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-3">
+                                        <input type="radio" name="visibility" value="public">Publiczny</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="radio" name="visibility" value="private" checked>Prywatny</label>
                                     </div>
                                 </div>
+                            </div>
                             @endif
                             <div class="form-group">
                                 <div class="row">
