@@ -61,7 +61,7 @@ class CategoriesController extends Controller
 
         $category = Category::findOrFail($id);
 
-        return view('cats.update', [
+        return view('category.update', [
             'category' => $category
         ]);
     }
@@ -80,7 +80,7 @@ class CategoriesController extends Controller
         
         $category->save();
 
-        return redirect('/');
+        return back();
     }
 
     public function delete($id)
