@@ -33,13 +33,13 @@
                                             </div>
                                             <div class="col-md-2 text-center pd">
                                                 <a class="btn btn-primary pull-right" aria-label="Left Align"
-                                                   href="/home/user/{{ $user['id'] }}">
+                                                   href="/admin/user/{{ $user['id'] }}">
                                                     <span class="btn-text"><i
                                                                 class="fas fa-pencil-alt"></i> Edytuj</span>
                                                 </a>
                                             </div>
                                             <div class="col-md-2 text-center pd">
-                                                <form action="/home/user/{{ $user['id'] }}"
+                                                <form action="/admin/user/{{ $user['id'] }}"
                                                       method="post">
                                                     {{ method_field('DELETE') }}
                                                     {{ csrf_field() }}
