@@ -24,7 +24,7 @@
                             <div class="form-group">
                                 <label for="title">Tytuł</label>
                                 <input type="text" class="form-control" name="name" id="title"
-                                       placeholder="Enter title">
+                                       placeholder="Podaj tytuł">
                             </div>
                             <div class="form-group">
                                 <div class="row">
@@ -82,7 +82,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Wyślij</button>
+                            <button type="submit" class="btn btn-primary" aria-label="Center Align">Wyślij</button>
                         </form>
                     </div>
                 </div>
