@@ -10,7 +10,7 @@
                                 Panel Administratora
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Cofnij</a>
+                             <a href="{{ url('/panel') }}">Cofnij</a>
                             </div>
                         </div>
                     <div class="card-body">
