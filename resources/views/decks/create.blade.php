@@ -5,8 +5,12 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
+                    
+                    <div class="card-header">
                     <div class="row">
-                    <div class="card-header">Tworzenie nowego zestawu w podkategorii {{ $subcategory['name'] }}</div>
+                        <div class="col-sm-12 col-md-6">
+                        Tworzenie nowego zestawu w podkategorii {{ $subcategory['name'] }}
+                    </div>
                      <div class="col-sm-12 col-md-6 text-right">
                                 <a href="{{ url()->previous() }}">Cofnij</a>
                             </div>
