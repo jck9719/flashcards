@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                               Zestaw {{ $subcategory['name'] }}
+                               Zestawy w dziale {{ $subcategory['name'] }}
                                 <p><small>(Twoje prywatne zestawy są oznaczone kolorem zielonym)</small></p>
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
