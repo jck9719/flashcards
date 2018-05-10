@@ -34,7 +34,7 @@
                                         </div>
 
                                         @if(Auth::check())
-                                            @if($isSupEd || Auth::id() == $deck['user_id'])
+                                            @if(($isSupEd || Auth::id() == $deck['user_id']) && Auth::user()->role_id != 1)
                                                 <div class="col-md-3 text-center pd">
                                                     <a class="btn btn-primary" href="/deck/{{ $deck['id'] }}/edit">
                                                         <span class="btn-text"><i
@@ -42,7 +42,7 @@
                                                     </a>
                                                 </div>
                                             @endif
-                                            @if(Auth::id() == $deck['user_id'])
+                                            @if(Auth::id() == $deck['user_id'] && Auth::user()->role_id != 1)
                                                 <div class="col-md-3 text-center pd">
                                                     <form action="/deck/{{ $deck['id'] }}"
                                                           method="post">
@@ -63,7 +63,7 @@
                             @endforeach
                         </ul>
                         <div class="divider" style="margin-top: 20px"></div>
-                        @if(Auth::check())
+                        @if(Auth::check() && Auth::user()->role_id != 1)
                             <div class="row">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6 text-center">
