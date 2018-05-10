@@ -9,7 +9,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                Zestaw {{ $subcategory['name'] }}
-                                <p><small>(Twoje prywatne zestawy są oznaczone kolorem żółtym)</small></p>
+                                <p><small>(Twoje prywatne zestawy są oznaczone kolorem zielonym)</small></p>
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
                                 <a href="{{ url()->previous() }}">Cofnij</a>
@@ -22,7 +22,7 @@
                             @foreach($decks as $deck)
                                 <li class="list-group-item"
                                     @if(!$deck['public'])
-                                        style="background: yellow"
+                                        style="background: green"
                                     @endif
                                 >
                                     <div class="row">
