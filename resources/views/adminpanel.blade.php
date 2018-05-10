@@ -15,7 +15,7 @@
                             </div>
                         </div>
                     </div>
-                    @if(Auth::user()->role_id == 1)
+                    @if($user->id != Auth::id())
                     <div class="row">
     				<div class="col-4 mx-auto">
                         <ul class="list-group">

@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <ul class="list-group">
                             @foreach($cats as $category)
-                            @if(Auth::user()->role_id == 1)
+                            @if($user->id != Auth::id())
                                 <li class="list-group-item">
                                     <div class="row">
                                         <div class="col-md-3">
