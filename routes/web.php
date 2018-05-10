@@ -49,32 +49,32 @@ Route::get('/panel', function() {
 	return view('/adminpanel');
 })->middleware('auth','1');
 
-Route::get('/dbusers', 'AdminController@index')->name('dbusers');
-Route::get('/dbusers/user/{id}', 'AdminController@update');
-Route::put('/dbusers/user/{id}', 'AdminController@put');
-Route::delete('/dbusers/user/{id}', 'AdminController@delete');
+Route::get('/dbusers', 'AdminController@index')->name('dbusers')->middleware('auth','1');
+Route::get('/dbusers/user/{id}', 'AdminController@update')->middleware('auth','1');
+Route::put('/dbusers/user/{id}', 'AdminController@put')->middleware('auth','1');
+Route::delete('/dbusers/user/{id}', 'AdminController@delete')->middleware('auth','1');
 
-Route::get('/cats', 'CategoriesController@list');
-Route::get('/cats/new/create', 'CategoriesController@create');
-Route::post('/cats/create', 'CategoriesController@store');
-Route::get('/cats/{id}/update', 'CategoriesController@update');
-Route::put('/cats/{id}', 'CategoriesController@put');
-Route::delete('/cats/{id}', 'CategoriesController@delete');
+Route::get('/cats', 'CategoriesController@list')->middleware('auth','1');
+Route::get('/cats/new/create', 'CategoriesController@create')->middleware('auth','1');
+Route::post('/cats/create', 'CategoriesController@store')->middleware('auth','1');
+Route::get('/cats/{id}/update', 'CategoriesController@update')->middleware('auth','1');
+Route::put('/cats/{id}', 'CategoriesController@put')->middleware('auth','1');
+Route::delete('/cats/{id}', 'CategoriesController@delete')->middleware('auth','1');
 
-Route::get('/subs', 'SubcategoriesController@list');
-Route::get('/subs/{id}/create', 'SubcategoriesController@create');
-Route::get('/subs/{cid}/subcategory/{sid}/update', 'SubcategoriesController@update');
-Route::post('/subs/{id}/create', 'SubcategoriesController@store');
-Route::put('/subs/{cid}/subcategory/{sid}', 'SubcategoriesController@put');
-Route::delete('/subs/{cid}/subcategory/{sid}', 'SubcategoriesController@delete');
+Route::get('/subs', 'SubcategoriesController@list')->middleware('auth','1');
+Route::get('/subs/{id}/create', 'SubcategoriesController@create')->middleware('auth','1');
+Route::get('/subs/{cid}/subcategory/{sid}/update', 'SubcategoriesController@update')->middleware('auth','1');
+Route::post('/subs/{id}/create', 'SubcategoriesController@store')->middleware('auth','1');
+Route::put('/subs/{cid}/subcategory/{sid}', 'SubcategoriesController@put')->middleware('auth','1');
+Route::delete('/subs/{cid}/subcategory/{sid}', 'SubcategoriesController@delete')->middleware('auth','1');
 
-Route::get('/sets', 'DecksController@list');
-Route::get('/sets/{id}/edit', 'DecksController@edit');
-Route::put('/sets/{id}', 'DecksController@update');
+Route::get('/sets', 'DecksController@list')->middleware('auth','1');
+Route::get('/sets/{id}/edit', 'DecksController@edit')->middleware('auth','1');
+Route::put('/sets/{id}', 'DecksController@update')->middleware('auth','1');
 
-Route::get('/sets/{cid}/subcategory/{sid}/add', 'DecksController@newDeck');
-Route::post('/sets/{cid}/subcategory/{sid}/add', 'DecksController@add');
-Route::delete('/sets/{id}', 'DecksController@delete');
+Route::get('/sets/{cid}/subcategory/{sid}/add', 'DecksController@newDeck')->middleware('auth','1');
+Route::post('/sets/{cid}/subcategory/{sid}/add', 'DecksController@add')->middleware('auth','1');
+Route::delete('/sets/{id}', 'DecksController@delete')->middleware('auth','1');
 
 
 
