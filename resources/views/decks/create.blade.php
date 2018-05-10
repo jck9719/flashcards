@@ -5,7 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Tworzenie nowego zestawu w subkategorii {{ $subcategory['name'] }}</div>
+                    <div class="card-header">Tworzenie nowego zestawu w podkategorii {{ $subcategory['name'] }}</div>
+                     <div class="col-sm-12 col-md-6 text-right">
+                                <a href="{{ url()->previous() }}">Cofnij</a>
+                            </div>
 
                     <div class="card-body">
                         <form action="/category/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}/decks/add"
