@@ -22,7 +22,7 @@
                             @foreach($decks as $deck)
                                 <li class="list-group-item"
                                     @if(!$deck['public'])
-                                        style="background: green"
+                                        style="background: #6cd84e"
                                     @endif
                                 >
                                     <div class="row">
