@@ -5,10 +5,16 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Kategorie</div>
-                    <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Cofnij</a>
+                   <div class="card-header">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                Podzestawy zestawu {{ $category['name'] }}
                             </div>
+                            <div class="col-sm-12 col-md-6 text-right">
+                               <a href="{{ url()->previous() }}">Cofnij</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-body">
                         <ul class="list-group">
                             @foreach($categories as $category)
@@ -31,3 +37,4 @@
         </div>
     </div>
 @endsection
+
