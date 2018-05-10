@@ -11,7 +11,7 @@
                                 Podzestawy zestawu {{ $category['name'] }}
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <a href="{{ url()->previous() }}">Cofnij</a>
+                                <a href="{{ url('/start') }}">Cofnij</a>
                             </div>
                         </div>
                     </div>
