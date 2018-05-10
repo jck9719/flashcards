@@ -8,7 +8,7 @@
                    <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                Podzestawy zestawu {{ $category['name'] }}
+                                Kategorie
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
                                <a href="{{ url()->previous() }}">Cofnij</a>
