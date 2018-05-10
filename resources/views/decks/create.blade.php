@@ -65,7 +65,7 @@
                                 <div class="row">
                                     <div class="col-md-3"></div>
                                     <div class="col-md-3">
-                                        <button class="btn btn-danger" id="add-row-btn">Dodaj nowy wiersz</button>
+                                        <button class="btn btn-success" id="add-row-btn">Dodaj nowy wiersz</button>
                                     </div>
                                     <div class="col-md-3">
                                         <button class="btn btn-danger" id="delete-row-btn">Usuń ostatni wiersz</button>
