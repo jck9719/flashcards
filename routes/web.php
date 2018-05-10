@@ -47,7 +47,7 @@ Auth::routes();
 
 Route::get('/panel', function() {
 	return view('/adminpanel');
-});
+})->middleware('auth','1');
 
 Route::get('/dbusers', 'AdminController@index')->name('dbusers');
 Route::get('/dbusers/user/{id}', 'AdminController@update');
