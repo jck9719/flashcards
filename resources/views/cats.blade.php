@@ -17,6 +17,7 @@
                     <div class="card-body">
                         <ul class="list-group">
                             @foreach($cats as $category)
+                            @if(Auth::user()->role_id == 1)
                                 <li class="list-group-item">
                                     <div class="row">
                                         <div class="col-md-3">
@@ -46,6 +47,7 @@
                                                 </div>
                                     </div>
                                 </li>
+                                @endif
                             @endforeach
                         </ul>
                         <div class="divider" style="margin-top: 20px"></div>

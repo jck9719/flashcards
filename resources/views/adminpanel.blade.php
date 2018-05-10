@@ -15,6 +15,7 @@
                             </div>
                         </div>
                     </div>
+                    @if(Auth::user()->role_id == 1)
                     <div class="row">
     				<div class="col-4 mx-auto">
                         <ul class="list-group">
@@ -25,6 +26,7 @@
   						</ul>
 					</div>
 				</div>
+                @endif
 				</div>
 			</div>
 		</div>
