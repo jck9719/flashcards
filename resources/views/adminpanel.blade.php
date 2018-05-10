@@ -15,7 +15,6 @@
                             </div>
                         </div>
                     </div>
-                    @if($user->id != Auth::id())
                     <div class="row">
     				<div class="col-4 mx-auto">
                         <ul class="list-group">
@@ -26,7 +25,7 @@
   						</ul>
 					</div>
 				</div>
-                @endif
+                
 				</div>
 			</div>
 		</div>
