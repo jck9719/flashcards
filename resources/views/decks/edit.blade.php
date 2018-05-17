@@ -24,7 +24,7 @@
                             <div class="form-group">
                                 <label for="title">Tytuł</label>
                                 <input type="text" class="form-control" name="name" id="title"
-                                       value="{{ $deck['name'] }}">
+                                       value="{{ $deck['name'] }}" required>
                             </div>
                             <div class="form-group">
                                 <div class="row">

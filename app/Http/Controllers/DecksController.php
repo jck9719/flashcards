@@ -175,7 +175,7 @@ class DecksController extends Controller
         }
 
 
-        if ($isFirstLanguage && count($words) == 0) {
+       if ($isFirstLanguage && count($words) == 0) {
             $words = json_decode($deck->words, true);
             $request->session()->put('isFirstLanguage', false);
             $request->session()->put('words', $words);
@@ -183,7 +183,8 @@ class DecksController extends Controller
             $request->session()->put('language2', $langToLearn);
             $langToLearn = $request->session()->get('language1');
             $langToCheck = $request->session()->get('language2');
-        } else if (!$isFirstLanguage && count($words) == 0) {
+        } 
+        else if (!$isFirstLanguage && count($words) == 0) {
             $pointedWordsCount = $request->session()->pull('pointedWordsCount');
             $allWordsCount = $request->session()->pull('wordsCount');
             $wrongWords = $request->session()->pull('wrongWords');
@@ -207,7 +208,7 @@ class DecksController extends Controller
         }
 
 
-        shuffle($words);
+       shuffle($words);
 
         $word = array_pop($words);
         $request->session()->put('words', $words);

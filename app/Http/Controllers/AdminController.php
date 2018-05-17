@@ -9,6 +9,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+
 
 class AdminController extends Controller
 {
@@ -53,18 +55,32 @@ class AdminController extends Controller
 
         $user = User::findOrFail($id);
         DB::table('permissions')->where('user_id', $user->id)->delete();
+
+        if($user->role_id != 4)
+        {
         foreach ($cats as $cat) {
             $permission = new Permission();
             $permission->user_id = $user->id;
             $permission->subcategory_id = $cat;
             $permission->save();
         }
+    }
+
+        $Name = $request->input('title');
+        $user->name = $Name;
+        $Email = $request->input('em');
+        $user->email = $Email;
+        if(!empty($request->input('pass')))
+        {
+            $passwd = $request->input('pass');
+            $user->password = Hash::make($passwd);
+        }
         $roleId = $request->input('role');
         $user->role_id = $roleId;
         $user->save();
 
         return redirect('/dbusers');
-    }
+    }  
 
     public function delete($id)
     {

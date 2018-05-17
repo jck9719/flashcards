@@ -21,11 +21,11 @@
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="title">Tytuł</label>
-                                <input type="text" class="form-control" name="title" id="title" placeholder="Enter title">
+                                <input type="text" class="form-control" name="title" id="title" placeholder="Podaj tytuł" required>
                             </div>
                             <div class="form-group">
                                 <label for="description">Opis</label>
-                                <textarea class="form-control" name="description" id="description" rows="5" placeholder="Enter description"></textarea>
+                                <textarea class="form-control" name="description" id="description" rows="5" placeholder="Podaj opis" required></textarea>
                             </div>
                     
                             <button type="submit" class="btn btn-primary mg float-right">Stwórz</button>

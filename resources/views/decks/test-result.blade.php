@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                {{ $deck['name'] }} Test Results
+                                {{ $deck['name'] }} Wyniki
                                 <p><small>({{ $deck['language1']['name'] }} / {{ $deck['language2']['name'] }})</small></p>
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">

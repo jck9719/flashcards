@@ -24,13 +24,16 @@
                             <div class="form-group">
                                 <label for="title">Nazwa</label>
                                 <input type="text" class="form-control" name="title" id="title"
-                                       placeholder="Enter title" value="{{ $user['name'] }}" disabled>
+                                       placeholder="Wpisz nazwę" value="{{ $user['name'] }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="em">Email</label>
                                 <input type="text" class="form-control" name="em" id="em"
-                                       placeholder="Enter title" value="{{ $user['email'] }}" disabled>
+                                       placeholder="Wpisz email" value="{{ $user['email'] }}" required>
                             </div>
+                            <div class="form-group">
+                                <label for="pass">Hasło</label>
+                                <input type="password" class="form-control" name="pass" id="pass">
                             <div class="form-group">
                                 <label for="role">Zmiana roli</label>
                                 <select class="form-control" id="role" name="role">

@@ -24,12 +24,12 @@
                             <div class="form-group">
                                 <label for="title">Tytuł</label>
                                 <input type="text" class="form-control" name="title" id="title"
-                                       placeholder="Enter title" value="{{ $category['name'] }}">
+                                       placeholder="Podaj tytuł" value="{{ $category['name'] }}">required
                             </div>
                             <div class="form-group">
                                 <label for="description">Opis</label>
                                 <textarea class="form-control" name="description" id="description" rows="5"
-                                          placeholder="Enter description">{{ $category['description'] }}</textarea>
+                                          placeholder="Podaj opis" required>{{ $category['description'] }}</textarea>
                             </div>
                             
                             <button type="submit" class="btn btn-primary mg float-right">Edytuj</button>
