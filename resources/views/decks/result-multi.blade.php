@@ -12,7 +12,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <p class="text-center">
-                                        Świetnie, co powiesz na mały <a href="/deck/test/{{ $deck['id'] }}">test</a>?
+                                        Świetnie, co powiesz na mały <a href="/deck/{{ $deck['id'] }}">test</a>?
                                     </p>
                                 </div>
                             </div>

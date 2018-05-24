@@ -23,7 +23,7 @@
                                 <a href="/deck/{{ $deck['id'] }}/all">Wyświetl słówka</a>
                             </p>
                             <p>
-                                 <a href="/deck/test/{{ $deck['id'] }}">Tryb sprawdzania wiedzy</a>
+                                 <a href="/deck/test/{{ $deck['id'] }}">Tryb nauki III: mix</a>
                              </p>
                             </div>
                             <div class="col-md-3">
@@ -45,7 +45,19 @@
                                     <a href="/deck/multi/{{ $deck['id'] }}/{{ $deck['language2_id'] }}/{{ $deck['language1_id'] }}">Tryb nauki II: {{ $deck['language2']['code'] }}
                                         / {{ $deck['language1']['code'] }}</a>
                                 </p>
-                            </div>
+                                </div>
+                                <div class="cold-md-3">
+                                <p>
+                                    <a href="/deck/test_pl_en/{{ $deck['id'] }}">Test PL=>EN</a>
+                                </p>
+
+                                <p>
+                                <a href="/deck/test_en_pl/{{ $deck['id'] }}">Test EN=>PL</a>
+                                </p>
+                                </div>
+
+
+                            
                             
                         </div>
                     </div>

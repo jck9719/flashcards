@@ -86,6 +86,32 @@ class DecksController extends Controller
         ]);
     }
 
+    public function learnMix(Request $request, $id)
+    {
+        clearSession($request);
+        $deck = Deck::with(['language1', 'language2'])->findOrFail($id);
+        $langToLearn = $deck->language1;
+        $langToCheck = $deck->language2;
+
+        $words = json_decode($deck->words, true);
+
+        $request->session()->put('words', $words);
+        $request->session()->put('language1', $langToLearn);
+        $request->session()->put('language2', $langToCheck);
+        $request->session()->put('isFirstLanguage', true);
+        $request->session()->put('wordsCount', count($words) * 2);
+        $request->session()->put('pointedWordsCount', 0);
+        $request->session()->put('wrongWords', array());
+
+        return view('decks.test-start', [
+            'deck' => $deck,
+            'langToLearn' => $langToLearn,
+            'langToCheck' => $langToCheck
+        ]);
+    }
+
+    
+
     public function learnMulti(Request $request, $id, $l1, $l2)
     {
         clearSession($request);
@@ -137,6 +163,8 @@ class DecksController extends Controller
         }
     }
 
+    #mix
+
     public function testKnowledgeStart(Request $request, $id)
     {
         $deck = Deck::with(['language1', 'language2'])->findOrFail($id);
@@ -159,6 +187,8 @@ class DecksController extends Controller
             'langToCheck' => $langToCheck
         ]);
     }
+    
+    #mix
 
     public function testKnowledge(Request $request, $id)
     {
@@ -183,8 +213,82 @@ class DecksController extends Controller
             $request->session()->put('language2', $langToLearn);
             $langToLearn = $request->session()->get('language1');
             $langToCheck = $request->session()->get('language2');
+            $wrongWords = $request->session()->pull('wrongWords');
         } 
         else if (!$isFirstLanguage && count($words) == 0) {
+            $pointedWordsCount = $request->session()->pull('pointedWordsCount');
+            $allWordsCount = $request->session()->pull('wordsCount');
+            $wrongWords = $request->session()->pull('wrongWords');
+                $result = [
+                    'percentage' => $pointedWordsCount / $allWordsCount
+                ];
+            
+            return view('decks.test-result', [
+                'wrongs' => $wrongWords,
+                'words' => $words,
+                'result' => $result,
+                'deck' => $deck
+            ]);
+        }
+
+
+       shuffle($words);
+
+        $word = array_pop($words);
+        $request->session()->put('words', $words);
+        $request->session()->put('checkedWord', $word[$langToCheck['code']]);
+
+        return view('decks.test', [
+            'deck' => $deck,
+            'langToLearn' => $langToLearn,
+            'langToCheck' => $langToCheck,
+            'word' => $word
+        ]);
+    }
+
+    #pl=>en
+
+    public function testKnowledgeStartSingle(Request $request, $id)
+    {
+        $deck = Deck::with(['language1', 'language2'])->findOrFail($id);
+        $langToLearn = $deck->language1;
+        $langToCheck = $deck->language2;
+
+        $words = json_decode($deck->words, true);
+
+        $request->session()->put('words', $words);
+        $request->session()->put('language1', $langToLearn);
+        $request->session()->put('language2', $langToCheck);
+        $request->session()->put('wordsCount', count($words));
+        $request->session()->put('pointedWordsCount', 0);
+        $request->session()->put('wrongWords', array());
+
+        return view('decks.test-start-pl', [
+            'deck' => $deck,
+            'langToLearn' => $langToLearn,
+            'langToCheck' => $langToCheck
+        ]);
+    }
+
+    #pl=>en
+
+    public function testKnowledgePlEn(Request $request, $id)
+    {
+        $deck = Deck::with(['language1', 'language2'])->findOrFail($id);
+        $langToLearn = $request->session()->get('language1');
+        $langToCheck = $request->session()->get('language2');
+        $words = $request->session()->get('words');
+        
+
+
+        $checkedAgainst = $request->session()->get('checkedWord', 'xxxxx');
+        if (($wordToCheck = $request->input($langToCheck['code'])) != null) {
+            $this->addPoints($request, $wordToCheck, $checkedAgainst);
+        }
+
+
+       
+        if (count($words) == 0) {
             $pointedWordsCount = $request->session()->pull('pointedWordsCount');
             $allWordsCount = $request->session()->pull('wordsCount');
             $wrongWords = $request->session()->pull('wrongWords');
@@ -214,13 +318,93 @@ class DecksController extends Controller
         $request->session()->put('words', $words);
         $request->session()->put('checkedWord', $word[$langToCheck['code']]);
 
-        return view('decks.test', [
+        return view('decks.test-pl', [
             'deck' => $deck,
             'langToLearn' => $langToLearn,
             'langToCheck' => $langToCheck,
             'word' => $word
         ]);
     }
+
+    #en=>pl
+
+    public function testKnowledgeStartSingleEn(Request $request, $id)
+    {
+        $deck = Deck::with(['language1', 'language2'])->findOrFail($id);
+        $langToLearn = $deck->language2;
+        $langToCheck = $deck->language1;
+
+        $words = json_decode($deck->words, true);
+
+        $request->session()->put('words', $words);
+        $request->session()->put('language2', $langToLearn);
+        $request->session()->put('language1', $langToCheck);
+        $request->session()->put('wordsCount', count($words));
+        $request->session()->put('pointedWordsCount', 0);
+        $request->session()->put('wrongWords', array());
+
+        return view('decks.test-start-en', [
+            'deck' => $deck,
+            'langToLearn' => $langToLearn,
+            'langToCheck' => $langToCheck
+        ]);
+    }
+
+    #en=>pl
+
+    public function testKnowledgeEnPl(Request $request, $id)
+    {
+        $deck = Deck::with(['language1', 'language2'])->findOrFail($id);
+        $langToLearn = $request->session()->get('language2');
+        $langToCheck = $request->session()->get('language1');
+        $words = $request->session()->get('words');
+        
+
+        $checkedAgainst = $request->session()->get('checkedWord', 'xxxxx');
+        if (($wordToCheck = $request->input($langToCheck['code'])) != null) {
+            $this->addPoints($request, $wordToCheck, $checkedAgainst);
+        }
+
+
+       
+        if (count($words) == 0) {
+            $pointedWordsCount = $request->session()->pull('pointedWordsCount');
+            $allWordsCount = $request->session()->pull('wordsCount');
+            $wrongWords = $request->session()->pull('wrongWords');
+            if (Auth::id()) {
+                $result = new Result();
+                $result->user_id = Auth::id();
+                $result->deck_id = $deck->id;
+                $result->percentage = $pointedWordsCount / $allWordsCount;
+                $result->save();
+            } else {
+                $result = [
+                    'percentage' => $pointedWordsCount / $allWordsCount
+                ];
+            }
+
+            return view('decks.test-result', [
+                'wrongs' => $wrongWords,
+                'result' => $result,
+                'deck' => $deck
+            ]);
+        }
+
+
+       shuffle($words);
+
+        $word = array_pop($words);
+        $request->session()->put('words', $words);
+        $request->session()->put('checkedWord', $word[$langToCheck['code']]);
+
+        return view('decks.test-en', [
+            'deck' => $deck,
+            'langToLearn' => $langToLearn,
+            'langToCheck' => $langToCheck,
+            'word' => $word
+        ]);
+    }
+
 
     public function newDeck($cid, $sid)
     {

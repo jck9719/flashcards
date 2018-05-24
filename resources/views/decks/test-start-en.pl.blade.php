@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                {{ $deck['name'] }} - Nauka Mix!
+                                {{ $deck['name'] }} - Test EN=>PL!
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
                                 <a href="{{ url()->previous() }}">Cofnij</a>

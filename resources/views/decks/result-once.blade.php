@@ -22,7 +22,7 @@
 
                     <div class="card-body text-center">
                         @if(count($words) == 0)
-                            <a href="/deck/test/{{ $deck['id'] }}">Co powiesz na test?</a>
+                            <a href="/deck/{{ $deck['id'] }}">Co powiesz na test?</a>
                         @else
                             <ul class="list-group">
                                 <div class="row">

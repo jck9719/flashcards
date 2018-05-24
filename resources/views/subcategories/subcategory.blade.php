@@ -28,9 +28,7 @@
                                     <div class="row">
                                         <div class="col-md-3">
                                             <a href="/deck/{{ $deck['id'] }}">{{ $deck['name'] }}</a>
-                                            <p>
-                                                <small>{{ $deck['language1']['name'] }} / {{ $deck['language2']['name'] }}</small>
-                                            </p>
+                                            
                                         </div>
 
                                         @if(Auth::check())

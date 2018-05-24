@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                {{ $deck['name'] }} - Nauka Mix!
+                                {{ $deck['name'] }} - Test EN=>PL!
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
                                 <a href="{{ url()->previous() }}">Cofnij</a>
@@ -20,7 +20,7 @@
                         <ul class="list-group">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form action="/deck/test/{{ $deck['id'] }}" method="post">
+                                    <form action="/deck/test_en_pl/{{ $deck['id'] }}" method="post">
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-primary mg float-right">Sprawdź się!</button>
                                     </form>

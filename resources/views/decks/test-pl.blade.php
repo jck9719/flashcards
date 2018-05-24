@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                {{ $deck['name'] }} - Nauka Mix!!
+                                {{ $deck['name'] }} - Test PL->EN!
                             </div>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                                     {{ $langToCheck['name'] }}
                                 </div>
                             </div>
-                            <form action="/deck/test/{{ $deck['id'] }}" method="post">
+                            <form action="/deck/test_pl_en/{{ $deck['id'] }}" method="post">
                                 {{ csrf_field() }}
                                     <li class="list-group-item">
                                         <div class="row">

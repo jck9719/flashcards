@@ -20,10 +20,10 @@
                             @foreach($categories as $category)
                                 <li class="list-group-item">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <a href="/category/{{ $category['id'] }}">{{ $category['name'] }}</a>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             {{ $category['description'] }}
                                         </div>
                                     </div>
