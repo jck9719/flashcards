@@ -9,14 +9,9 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 {{ $deck['name'] }} Wyniki
-                                <p><small>({{ $deck['language1']['name'] }} / {{ $deck['language2']['name'] }})</small></p>
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                @if(Auth::id())
-                                    <a href="{{ url('results') }}">Przejdź do wyników</a>
-                                @else
                                     <a href="/deck/{{ $deck['id'] }}">Wróć do zestawu</a>
-                                @endif
                             </div>
                         </div>
                     </div>

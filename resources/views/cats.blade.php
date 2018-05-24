@@ -45,11 +45,17 @@
                                                         <span class="btn-text"><i class="fas fa-pencil-alt"></i>  Dodaj podkategorię</span>
                                                     </a>
                                                 </div>
+                                               
                                     </div>
                                 </li>
                                 
                             @endforeach
                         </ul>
+                        <div class="col-md-2 text-center pd">
+                                                    <a class="btn btn-primary pull-right" aria-label="Left Align" href="/cats/new/create">
+                                                        <span class="btn-text"><i class="fas fa-pencil-alt"></i>Stwórz nową kategorię</span>
+                                                    </a>
+                                                </div>
                         <div class="divider" style="margin-top: 20px"></div>
                     </div>
                 </div>

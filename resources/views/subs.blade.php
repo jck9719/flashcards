@@ -42,7 +42,7 @@
                                                     </form>
                                                 </div>
                                                 <div class="col-md-2 text-center pd">
-                                                    <a class="btn btn-primary pull-right" aria-label="Left Align" href="/sets/{{ $subcategory['category_id'] }}/subcategory/{{ $subcategory['id'] }}/add">
+                                                    <a class="btn btn-primary pull-right" aria-label="Left Align" href="/cats/new/create">
                                                         <span class="btn-text"><i class="fas fa-pencil-alt"></i>Stwórz nowy zestaw</span>
                                                     </a>
                                                 </div>
